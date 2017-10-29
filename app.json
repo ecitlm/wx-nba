@@ -1,0 +1,17 @@
+{
+  "pages": [
+        "pages/nba/nba",
+    "pages/player_detail/player_detail",
+
+    "pages/nba/live_detail",
+    "pages/index/index",
+    "pages/logs/logs"
+ 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00AA98",
+    "navigationBarTitleText": "NBA看球",
+    "navigationBarTextStyle": "#FFF"
+  }
+}

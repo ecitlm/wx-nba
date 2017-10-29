@@ -1,0 +1,35 @@
+<view class="date-list">
+  <view class='date-item' data-time="{{list.pre_date}}" bindtap='selectDate'>上一日</view>
+  <view class='date-item' data-time="{{list.cur_date}}" bindtap='selectDate'> {{list.cur_date || "今日"}} </view>
+  <view class='date-item' data-time="{{list.next_date}}" bindtap='selectDate'>下一日 </view>
+</view>
+
+
+<view wx:if="{{list.list}}">
+  <view class="live_item" wx:for="{{list.list}}" wx:for-item="list" >
+    <navigator url="/pages/nba/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
+      <view class="team">
+        <image src="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.visitteamlogo}}" class="team-logo"></image>
+        <view class="team-info">
+          <view class="team-score">{{list.visitscore}}</view>
+          <view class="team-name">{{list.visitteamname}}</view>
+        </view>
+      </view>
+      <view class="time">{{list.match_status || list.time}}{{list.match_time}}</view>
+      <view class="team">
+        <view class="team-info">
+          <view class="team-score">{{list.homescore }}</view>
+          <view class="team-name">{{list.hometeamname}}</view>
+        </view>
+        <image src="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.hometeamlogo}}" class="team-logo"></image>
+      </view>
+      <view class="team-news" wx:if="{{list.title}}">
+        <text class="iangle">战报</text> {{list.title}}
+      </view>
+    </navigator>
+  </view>
+</view>
+<view wx:else class='no-data'>当日没有比赛数据 </view>
+
+<!--刷新按钮  -->
+<view class='refesh' data-time="{{list.cur_date}}" bindtap='selectDate'></view>

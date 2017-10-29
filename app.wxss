@@ -1,0 +1,29 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.left{float:left;}
+.right{float:right;}
+
+
+.padding-lrtb-30{
+  padding: 30rpx !important;
+}
+
+.padding-lr-30{
+  padding:0 30rpx !important;
+}
+
+.no-data{
+  padding: 100rpx 30rpx;
+  text-align: center;
+  width: 100%;box-sizing: border-box;
+  font-size: 32rpx;
+}

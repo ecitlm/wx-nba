@@ -1,0 +1,4 @@
+/* pages/login/login.wxss */
+page{
+  background: #FFF !important
+}

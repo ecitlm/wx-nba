@@ -1,0 +1,19 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+<view class='ipt-wrap'>
+  <view class="input-cell">
+      <input class="input-item" placeholder="请输入商户号" value="{{merchantNo}}" bindinput='merNoInput' />
+  </view>
+
+   <view class="input-cell">
+      <input class="input-item" placeholder="请输入账号" value="{{name}}"  bindinput="nameInput" />
+  </view>
+
+  <view class="input-cell">
+      <input class="input-item" type="password" placeholder="请输入密码" value="{{pwd}}" bindinput='pwdInput' />
+  </view>
+</view>
+  <view class="weui-btn-area form_btn_wrap">
+    <button class="weui-btn" type="primary" bindtap="toLogin">确定</button>
+  </view>
+</view>
