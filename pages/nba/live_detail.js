@@ -69,6 +69,15 @@ Page({
  
   },
 
+  previewImage: function (e) {
+    var url = e.target.dataset.url
+    console.log(e.target);
+    wx.previewImage({
+      current: url, // 当前显示图片的http链接
+      urls: [url] // 需要预览的图片http链接列表
+    })
+  },
+
   // 滑动切换tab 
   bindChange: function (e) {
     var that = this;
