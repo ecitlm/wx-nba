@@ -1,0 +1,25 @@
+<template name="footer">
+  <view class='visibility'></view>
+  <view class='footer'>
+    <view class="foot-item   {{footer==0 ? 'active' : ''}}">
+      <view class='icon icon-ball icon-ball-active '></view>
+      <text>赛事</text>
+    </view>
+    <view class="foot-item   {{footer==1 ? 'active' : ''}}">
+      <view class='icon icon-news icon-news-active'></view>
+      <text>资讯</text>
+    </view>
+    <view class="foot-item   {{footer==2 ? 'active' : ''}}">
+      <navigator url="/pages/team_rank/team_rank">
+        <view class='icon icon-rank icon-rank-active '></view>
+        排名
+      </navigator>
+    </view>
+
+    <view class='foot-item'>
+      <view class='icon icon-ball'></view>
+      关于
+    </view>
+
+  </view>
+</template>

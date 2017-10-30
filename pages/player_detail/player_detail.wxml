@@ -50,10 +50,10 @@
 <view class='gird-9'>
   <view class='base-info-title'>赛季数据</view>
   <view class='gird-9-item'>
-    <text>{{list.gamesStarted}}</text> 出场数
+    <text>{{list.games}}</text> 出场数
   </view>
   <view class='gird-9-item'>
-    <text>{{list.games}}</text> 首发次
+    <text>{{list.gamesStarted}}</text> 首发次
   </view>
   <view class='gird-9-item'>
     <text>{{list.minutesPG}}</text> 时间

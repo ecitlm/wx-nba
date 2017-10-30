@@ -1,7 +1,8 @@
 var app = getApp();
 Page({
   data: {
-    list: []
+    list: [],
+    footer:0
   },
   onLoad: function () {
 

@@ -29,26 +29,12 @@
     </navigator>
   </view>
 </view>
-<view wx:else class='no-data'>当日没有比赛数据 </view>
+<view wx:else class='no-data'>
+  <view class='icon-nothing'></view>
+  暂无数据
+</view>
 
 <!--刷新按钮  -->
 <view class='refesh' data-time="{{list.cur_date}}" bindtap='selectDate'></view>
-
-
-
-
-<view class='footer'>
-  <view class='foot-item'>
-    <view class='icon'></view>
-    <text>赛事</text>
-  </view>
-  <view class='foot-item'>
-    <view class='icon'></view>
-    <text>资讯</text>
-
-  </view>
-  <view class='foot-item'>
-    <view class='icon'></view>
-    排名
-  </view>
-</view>
+<import src="../footer/footer.wxml" />
+<template is='footer' data='{{footer}}'></template>

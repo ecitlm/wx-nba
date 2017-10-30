@@ -76,24 +76,22 @@
 .iangle {
   color: #fff;
   padding: 0px 3px;
-  font-size: 24rpx;
+  font-size: 22rpx;
   background: #00aa98;
 }
 page {
   position: relative;
 }
 .refesh {
-  width: 90rpx;
-  height: 90rpx;
+  width: 84rpx;
+  height: 84rpx;
   background: rgba(0, 170, 152, 0.6) url("https://coding.it919.cn/static/images/refesh.png") center no-repeat;
-  background-size: 90rpx 90rpx;
+  background-size: 84rpx 84rpx;
   border-radius: 50%;
   position: fixed;
   right: 10px;
-  bottom: 100rpx;
+  bottom: 110rpx;
   font-size: 28rpx;
-  text-align: center;
-  line-height: 90rpx;
   color: #fff;
   -webkit-transition: 0.4s;
   -webkit-transition: -webkit-transform 0.4s ease-out;

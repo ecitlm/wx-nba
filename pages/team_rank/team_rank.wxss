@@ -53,7 +53,12 @@ view.active {
 
 .t-body .team-item {
   font-size: 28rpx;
-  height: 60rpx;
-  line-height: 60rpx;
+  height: 65rpx;
+  line-height: 65rpx;
   border-bottom: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.t-body .team-item text:first-child,.t-head text:first-child{
+  text-align: left
 }

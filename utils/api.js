@@ -52,7 +52,17 @@ function team_rank(params) {
     .then(res => res.data)
 }
 
+//球队信息
+function team_info(params) {
+  return fetchApi('Nba/team_info', params)
+    .then(res => res.data)
+}
 
+//球队阵容
+function Lineup(params) {
+  return fetchApi('Nba/Lineup', params)
+    .then(res => res.data)
+}
 
 
 module.exports = {
@@ -61,5 +71,7 @@ module.exports = {
   live_content,
   technical_statistics,
   player_detail,
-  team_rank
+  team_rank,
+  team_info,
+  Lineup
 }
