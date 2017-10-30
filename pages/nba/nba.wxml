@@ -6,7 +6,7 @@
 
 
 <view wx:if="{{list.list}}">
-  <view class="live_item" wx:for="{{list.list}}" wx:for-item="list" >
+  <view class="live_item" wx:for="{{list.list}}" wx:for-item="list">
     <navigator url="/pages/nba/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
       <view class="team">
         <image src="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.visitteamlogo}}" class="team-logo"></image>
@@ -33,3 +33,22 @@
 
 <!--刷新按钮  -->
 <view class='refesh' data-time="{{list.cur_date}}" bindtap='selectDate'></view>
+
+
+
+
+<view class='footer'>
+  <view class='foot-item'>
+    <view class='icon'></view>
+    <text>赛事</text>
+  </view>
+  <view class='foot-item'>
+    <view class='icon'></view>
+    <text>资讯</text>
+
+  </view>
+  <view class='foot-item'>
+    <view class='icon'></view>
+    排名
+  </view>
+</view>

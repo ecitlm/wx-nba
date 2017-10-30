@@ -46,6 +46,13 @@ function player_detail(params) {
     .then(res => res.data)
 }
 
+//联盟排名
+function team_rank(params) {
+  return fetchApi('Nba/team_rank', params)
+    .then(res => res.data)
+}
+
+
 
 
 module.exports = {
@@ -53,5 +60,6 @@ module.exports = {
   live_detail,
   live_content,
   technical_statistics,
-  player_detail
+  player_detail,
+  team_rank
 }

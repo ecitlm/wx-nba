@@ -1,0 +1,45 @@
+<view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">西部排名</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">东部排名</view>
+  </view>
+  <view current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
+    <view class="swiper-item   {{currentTab==0 ? 'active' : ''}}">
+      <view class='t-head  padding-lr-30'>
+        <text>球队</text>
+        <text>胜场</text>
+        <text>负场</text>
+        <text>胜率</text>
+        <text>场均差</text>
+      </view>
+      <view class='t-body'>
+        <view class='team-item' wx:for="{{list.west}}" wx:for-item="item">
+          <text id="{{item.teamId}}">{{item.name}}</text>
+          <text>{{item.wins}}</text>
+          <text>{{item.losses}}</text>
+         <text>{{item['wining-percentage']}}</text>
+          <text>{{item['games-back'] }}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="swiper-item  {{currentTab==1 ? 'active' : ''}}">
+       <view class='t-head  padding-lr-30'>
+        <text>球队</text>
+        <text>胜场</text>
+        <text>负场</text>
+        <text>胜率</text>
+        <text>场均差</text>
+      </view>
+      <view class='t-body'>
+        <view class='team-item' wx:for="{{list.east}}" wx:for-item="item">
+          <text id="{{tiem.teamId}}">{{item.name}}</text>
+          <text>{{item.wins}}</text>
+          <text>{{item.losses}}</text>
+          <text>{{item['wining-percentage']}}</text>
+          <text>{{item['games-back'] }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

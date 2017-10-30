@@ -1,26 +1,64 @@
 
 
-ĞÂÀËÊÓÆµapi
+æ–°æµªè§†é¢‘api
 http://lives.sina.cn/aj/live/video?&livecast_id=169724&mintime=1446708153
 http://lives.sina.cn/aj/live/video?&livecast_id=169724&mintime=1509198124520
 
 
-¶«Î÷²¿ÅÅÃû
+ä¸œè¥¿éƒ¨æ’å
 https://matchweb.sports.qq.com/rank/team?columnId=100000&from=NBA
 
 
 
-ÇòÔ±ÏêÇé
+çƒå‘˜è¯¦æƒ…
 https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=player_detail&playerId=5294&sid=
 
 
-Çò¶ÓÏêÇé
+https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=team_rank&rt=w%2Ce%2Cd&sid=
+
+
+çƒé˜Ÿè¯¦æƒ…
 https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=team_detail&teamId=24&sid=
 
-Çò¶ÓÇòÔ±
+çƒé˜Ÿçƒå‘˜
+
+
+çƒé˜Ÿèµ›ç¨‹
+https://nb.3g.qq.com/nba/api/schedule@getMonthListByTeam?teamid=24&mouth=10&sid=
+
+
+
 
 https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=team_player&teamId=24&sid=
 
 
-Êı¾İÍ³¼ÆÅÅÃû
+æ•°æ®ç»Ÿè®¡æ’å
 https://live.3g.qq.com/g/s?aid=action_api&module=nba&action=player_top2&cy=pt%2Crb%2Cat%2Cst%2Cbk%2Cftp%2Ctpp%2Cto%2Cplm&sid=
+
+
+
+
+
+
+
+
+
+
+
+ç½‘æ˜“æ–°é—»NBAåˆ—è¡¨
+https://3g.163.com/touch/reconstruct/article/list/BD2AQH4Qwangning/0-10.html
+
+æ–°é—»è¯¦æƒ…
+view-source:http://3g.163.com/touch/article/D2081F3E0005877U/full.html
+
+
+çƒé•¿ç¤¾åŒº
+æ–°é—»åˆ—è¡¨
+http://service.qiuzhang.com/api/v1.4/news/newsinfo/GetNewsInfoList?category=1&pageNumber=2&pageSize=10&_=1509339828926
+http://service.qiuzhang.com/api/v1.4/news/newsinfo/GetNewsInfoList?category=1&pageNumber=3&pageSize=10&_=1509339828927
+
+è¯¦æƒ…
+http://service.qiuzhang.com/api/v1.4/news/newsinfo/GetNewsInfo?id=59f5e5274011cc2320fc9db8&_=1509339910195
+
+æ–‡ç« è¯„è®º
+http://service.qiuzhang.com/api/v1.4/news/newsshare/GetListByPaged?newsInfoId=59f5e5274011cc2320fc9db8&pageNumber=1&pageSize=10&_=1509339910197
