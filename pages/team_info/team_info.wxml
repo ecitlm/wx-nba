@@ -19,7 +19,6 @@
   <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">赛程</view>
   <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">阵容</view>
 </view>
-
 <view current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
   <view class="swiper-item   {{currentTab==0 ? 'active' : ''}}">
     <view class='teamHonor'>
