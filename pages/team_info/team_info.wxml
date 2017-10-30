@@ -25,7 +25,7 @@
     <view class='teamHonor'>
       <view class='honor-item '>
         <view class='icon rank'></view>
-        {{item.division}}第{{item.reboundsConference}}
+        {{item.division}}第{{item.divisionseed}}
       </view>
       <view class='honor-item'>
         <view class='icon no1'></view>
