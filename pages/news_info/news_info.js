@@ -24,19 +24,19 @@ Page({
         that.setData({
           item: res.data
         });
-        // if(res.data.img.length){
-        //   console.log("cccccccccccccccccccccccccccccc")
-        //   for (var i = 0; i < 2; i++) {
-        //     var str = "<!--IMG#" + i + "-->";
-        //     var replaceStr = "<img src=" + (res.data.img[0])['src'] + ">";
-        //     res.data.body = res.data.body.replace(str, replaceStr);
-        //   }
-        // }
+        if(res.data.img.length!=0){
+          for (var i = 0; i < 1; i++) {
+           var str = "<!--IMG#" + i + "-->";
+           var replaceStr = "<img src=" + (res.data.img[0])['src'] + ">";
+           res.data.body = res.data.body.replace(str, replaceStr);
+          }
+        }
         WxParse.wxParse('article', 'html', res.data.body, that, 5);
+       
       })
       .catch(e => {
         console.error(e)
-        var article = "文章已经删除";
+        var article = "文章已经1删除";
         WxParse.wxParse('article', 'html', article, that, 5);
       });
 

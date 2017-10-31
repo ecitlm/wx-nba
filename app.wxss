@@ -95,7 +95,18 @@
   color: #00AA98;
 }
 
+.icon-about{
+background: url(https://coding.it919.cn/static/images/about.png) center no-repeat;
+}
+
+
+
+
 .footer .icon {
   padding: 25rpx;
    background-size: 40rpx 40rpx !important;
+}
+
+footer navigator:active,footer navigator:kink{
+  background: #f5f5f5
 }

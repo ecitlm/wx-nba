@@ -6,15 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    footer:1
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
-    app.api.news_list({})
+    var data={
+      page:1
+    }
+    app.api.news_list(data)
       .then(res => {
         console.log(res);
         that.setData({

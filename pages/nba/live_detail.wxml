@@ -1,7 +1,7 @@
 <view class='live-gameheader'>
   <view class="gameinfo">
     <view class='team'>
-      <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.t1_icon}}'></image>
+      <image src='{{list.t1_icon}}'></image>
       <text>{{list.t1_name}}</text>
     </view>
     <view class='live-info'>
@@ -14,11 +14,10 @@
     </view>
 
     <view class='team'>
-      <image src="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.t2_icon}}"></image>
+      <image src="{{list.t2_icon}}"></image>
       <text>{{list.t2_name}}</text>
     </view>
   </view>
-
   <!--支持者  -->
   <view class='like-progress'>
     <view class='bar'>
@@ -49,10 +48,10 @@
 
         <view class='content-msg'>
           <text class='text-msg'>{{item.content}}</text>
-          <image wx:if="{{item.image_src}}" bindtap='previewImage'  data-url="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{item.image_src}}" src='{{item.image_src}}' mode="widthFix"></image>
+          <image wx:if="{{item.image_src}}" bindtap='previewImage'  data-url="{{item.image_src}}" src='{{item.image_src}}' mode="widthFix"></image>
           <view class='img-msg' wx:if="{{item.match_data[0]}}">
             <text>{{item.match_data[0].title}}</text>
-            <image class='img-msg-image' bindtap='previewImage'  data-url="https://coding.it919.cn/index.php/api/Nba/img?imgurl={{item.match_data[0].pic}}" wx:if="{{item.match_data[0].pic}}" src='{{item.match_data[0].pic}}'></image>
+            <image class='img-msg-image' bindtap='previewImage'  data-url="{{item.match_data[0].pic}}" wx:if="{{item.match_data[0].pic}}" src='{{item.match_data[0].pic}}'></image>
           </view>
         </view>
       </view>
@@ -60,7 +59,7 @@
     </view>
   </view>
   <view class="swiper-item  {{currentTab==1 ? 'active' : ''}}">
-    <view>Seside2</view>
+    <view> 暂无数据</view>
   </view>
   <view class="swiper-item  {{currentTab==2 ? 'active' : ''}}">
     <view wx-if="technical.topplayer.home">

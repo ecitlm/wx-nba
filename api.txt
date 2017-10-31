@@ -1,9 +1,13 @@
 
 
+看球NBA
+AppID(小程序ID) wx4ca52446535fd628
+秘钥  86e2978d68f19fc05eff44555ecbd966
+
+
 新浪视频api
 http://lives.sina.cn/aj/live/video?&livecast_id=169724&mintime=1446708153
 http://lives.sina.cn/aj/live/video?&livecast_id=169724&mintime=1509198124520
-
 
 东西部排名
 https://matchweb.sports.qq.com/rank/team?columnId=100000&from=NBA
@@ -61,4 +65,23 @@ http://service.qiuzhang.com/api/v1.4/news/newsinfo/GetNewsInfoList?category=1&pa
 http://service.qiuzhang.com/api/v1.4/news/newsinfo/GetNewsInfo?id=59f5e5274011cc2320fc9db8&_=1509339910195
 
 文章评论
-http://service.qiuzhang.com/api/v1.4/news/newsshare/GetListByPaged?newsInfoId=59f5e5274011cc2320fc9db8&pageNumber=1&pageSize=10&_=1509339910197
+http://service.qiuzhang.com/api/v1.4/news/newsshare/GetListByPaged?newsInfoId=59f5e5274011cc2320fc9db8&pageNumber=1&pageSize=10&_=15
+09339910197
+
+
+
+新闻详情图片域名地址
+https://cms-bucket.nosdn.127.net/
+https://coding.it919.cn/
+https://api.it919.cn/
+
+球队logo
+https://zxpic.gtimg.com
+https://zxpic.gtimg.com/
+0
+
+直播内容的图片地址
+https://puui.qpic.cn/vpic/0/w0025m15ssf_ori_3.jpg/0
+
+球员的名称
+http://nbachina.qq.com/media/img/players/head/260x190/1628397.png

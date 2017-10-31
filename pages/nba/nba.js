@@ -5,7 +5,6 @@ Page({
     footer:0
   },
   onLoad: function () {
-
     this.nab_schedule("") //初始化数据
   },
   //ajax 列表请求

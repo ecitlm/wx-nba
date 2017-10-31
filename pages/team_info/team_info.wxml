@@ -111,7 +111,7 @@
     <view class='list-player'>
       <view class='item-player' wx:for="{{playerList}}" wx:for-item="list">
         <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
-          <image src='{{list.logo}}'></image>
+          <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.logo}}'></image>
           <text>{{list.position}}</text> 
           <view class='pname'>{{list.cnalias}}</view>
 

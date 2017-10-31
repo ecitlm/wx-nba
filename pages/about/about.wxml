@@ -1,0 +1,23 @@
+<view class='a-head'>
+  <view class='left'>
+    <view class='name'>{{item.name}}</view>
+    <view class='job'>{{item.job}}</view>
+  </view>
+  <view class='right'>
+  <image src='{{item.icon}}' bindtap='previewImage' data-url="{{item.icon}}"></image>
+  </view>
+</view>
+
+<view class='wrap '>
+<view class='line'></view>
+<view class='list-view icon-address' bindtap='openMap'>{{item.address}}</view>
+<view class='list-view icon-mail'>{{item.mail}}</view>
+<view class='list-view icon-github'>{{item.github}}</view>
+<view class='list-view icon-blog'>{{item.blog}}</view>
+</view>
+<view class='Motto'>
+{{item.Motto}}
+</view>
+<view class='audio'>
+<audio poster="{{item.music.poster}}" name="{{item.music.name}}" author="{{item.music.author}}" src="{{item.music.src}}" id="myAudio" controls loop></audio>
+</view>

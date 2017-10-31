@@ -1,6 +1,8 @@
 {
   "pages": [
+   
     "pages/nba/nba",
+    "pages/about/about",
     "pages/news_list/news_list",
     "pages/news_info/news_info",
     "pages/team_info/team_info",
@@ -9,6 +11,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/team_rank/team_rank"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

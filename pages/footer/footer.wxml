@@ -2,14 +2,16 @@
   <view class='visibility'></view>
   <view class='footer'>
     <view class="foot-item   {{footer==0 ? 'active' : ''}}">
-      <view class='icon icon-ball icon-ball-active '></view>
-      <text>赛事</text>
+      <navigator url="/pages/nba/nba">
+        <view class='icon icon-ball icon-ball-active '></view>
+        <text>赛事</text>
+      </navigator>
     </view>
     <view class="foot-item   {{footer==1 ? 'active' : ''}}">
-     <navigator url="/pages/news_list/news_list">
-      <view class='icon icon-news icon-news-active'></view>
-      <text>资讯</text>
-        </navigator>
+      <navigator url="/pages/news_list/news_list">
+        <view class='icon icon-news icon-news-active'></view>
+        <text>资讯</text>
+      </navigator>
     </view>
     <view class="foot-item   {{footer==2 ? 'active' : ''}}">
       <navigator url="/pages/team_rank/team_rank">
@@ -17,10 +19,11 @@
         排名
       </navigator>
     </view>
-
     <view class='foot-item'>
-      <view class='icon icon-ball'></view>
+      <navigator url="/pages/about/about">
+      <view class='icon icon-about'></view>
       关于
+       </navigator>
     </view>
 
   </view>

@@ -1,15 +1,15 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true
 	},
 	"compileType": "weapp",
 	"libVersion": "1.6.0",
-	"appid": "wx10dfa02bd1a45491",
-	"projectname": "NBA",
+	"appid": "wx4ca52446535fd628",
+	"projectname": "wx-nba",
 	"condition": {
 		"weapp": {
 			"current": -1,

@@ -12,6 +12,7 @@ module.exports = function(api, path, params) {
         title: '加载中',
     });
     console.log(`${api}/${path}`);
+    console.log(params)
     return new Promise((resolve, reject) => {
         wx.request({
             url: `${api}/${path}`,
