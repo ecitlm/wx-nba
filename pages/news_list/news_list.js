@@ -1,43 +1,28 @@
 var app = getApp();
-var WxParse = require('../wxParse/wxParse.js');
+// pages/news_list/news_list.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    item: []
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-
-    var data = {
-      docid: e.docid
-    }
+  onLoad: function (options) {
     var that = this;
-    app.api.news_info(data)
+    app.api.news_list({})
       .then(res => {
         console.log(res);
         that.setData({
-          item: res.data
+          list: res.data
         });
-        // if(res.data.img.length){
-        //   console.log("cccccccccccccccccccccccccccccc")
-        //   for (var i = 0; i < 2; i++) {
-        //     var str = "<!--IMG#" + i + "-->";
-        //     var replaceStr = "<img src=" + (res.data.img[0])['src'] + ">";
-        //     res.data.body = res.data.body.replace(str, replaceStr);
-        //   }
-        // }
-        WxParse.wxParse('article', 'html', res.data.body, that, 5);
       })
       .catch(e => {
         console.error(e)
-        var article = "文章已经删除";
-        WxParse.wxParse('article', 'html', article, that, 5);
       });
 
   },

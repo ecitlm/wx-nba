@@ -1,4 +1,4 @@
-/* pages/news_info/news_info.wxss */
+
 .article{
   box-sizing: border-box;
   padding:20rpx 30rpx;
@@ -16,3 +16,4 @@
 .wxParse image{
   width: 100% !important;
 }
+

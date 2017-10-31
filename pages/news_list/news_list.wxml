@@ -1,0 +1,16 @@
+<view class="news-list" wx:for="{{list}}" wx:for-item="list">
+  <navigator url="/pages/news_info/news_info?docid={{list.docid}}">
+    <view class='list-img left'>
+      <image src='{{list.imgsrc}}'></image>
+    </view>
+    <view class='news-info'>
+      <view class='title'>{{list.title}}</view>
+      <view class='time-info'>
+        <text class='date'>{{list.ptime}}</text>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+
+

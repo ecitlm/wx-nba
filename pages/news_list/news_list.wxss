@@ -1,0 +1,26 @@
+/* pages/news_list/news_list.wxss */
+
+.news-list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.list-img {
+  margin-right: 30rpx;
+}
+
+.list-img image {
+  width: 185rpx;
+  height: 140rpx;
+}
+
+.news-info {
+  font-size: 32rpx;
+  padding-bottom: 2px;
+}
+
+.news-info .date {
+  font-size: 24rpx;
+}

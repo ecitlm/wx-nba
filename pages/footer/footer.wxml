@@ -6,8 +6,10 @@
       <text>赛事</text>
     </view>
     <view class="foot-item   {{footer==1 ? 'active' : ''}}">
+     <navigator url="/pages/news_list/news_list">
       <view class='icon icon-news icon-news-active'></view>
       <text>资讯</text>
+        </navigator>
     </view>
     <view class="foot-item   {{footer==2 ? 'active' : ''}}">
       <navigator url="/pages/team_rank/team_rank">

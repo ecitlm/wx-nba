@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/news_info/news_info",
     "pages/nba/nba",
+    "pages/news_list/news_list",
+    "pages/news_info/news_info",
     "pages/team_info/team_info",
     "pages/player_detail/player_detail",
     "pages/nba/live_detail",
     "pages/index/index",
     "pages/logs/logs",
     "pages/team_rank/team_rank"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
