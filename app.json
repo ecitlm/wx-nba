@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/news_info/news_info",
     "pages/nba/nba",
     "pages/team_info/team_info",
     "pages/player_detail/player_detail",
@@ -7,6 +8,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/team_rank/team_rank"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

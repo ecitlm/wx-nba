@@ -64,6 +64,11 @@ function Lineup(params) {
     .then(res => res.data)
 }
 
+function news_info(params) {
+  return fetchApi('Nba/news_info', params)
+    .then(res => res.data)
+}
+
 
 module.exports = {
   nab_schedule,
@@ -73,5 +78,6 @@ module.exports = {
   player_detail,
   team_rank,
   team_info,
-  Lineup
+  Lineup,
+  news_info
 }

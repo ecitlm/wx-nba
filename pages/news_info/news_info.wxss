@@ -1,0 +1,18 @@
+/* pages/news_info/news_info.wxss */
+.article{
+  box-sizing: border-box;
+  padding:20rpx 30rpx;
+  width: 100%;
+}
+.article .title{
+  font-size: 36rpx;
+
+}
+.wxParse{
+  font-size: 32rpx;
+  color: #333
+}
+
+.wxParse image{
+  width: 100% !important;
+}
