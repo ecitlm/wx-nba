@@ -3,6 +3,7 @@ Page({
   data: {
     list: [],
     footer:0
+
   },
   onLoad: function () {
     this.nab_schedule("") //初始化数据
@@ -30,6 +31,14 @@ Page({
   selectDate: function (e) {
     this.nab_schedule(e.target.dataset.time);
   },
+
+  //  点击日期组件确定事件  
+  bindDateChange: function (e) {
+    this.nab_schedule(e.detail.value);
+  },
+
+
+
   loadMore: function (e) {
   },
   upper: function (e) {

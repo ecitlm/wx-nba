@@ -1,19 +1,14 @@
 <view class='article'>
   <view class='title'>
-  {{item.title}}
-  <view class='ptime'>{{item.ptime}}</view>
-
+    {{item.title}}
+    <view class='ptime'>{{item.ptime}}</view>
   </view>
-  
   <import src="../wxParse/wxParse.wxml" />
   <view class="wxParse">
     <template is="wxParse" data="{{wxParseData:article.nodes}}" />
   </view>
 </view>
-
-
-
-<view class='comment-wrap'  wx:if="{{comments}}">
+<view class='comment-wrap' wx:if="{{comments.length !=0}}">
   <view class='title'>评论</view>
   <view class='comment-item' wx:for="{{comments}}" wx:for-item="comments">
     <view class='left'>

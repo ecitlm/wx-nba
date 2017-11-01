@@ -6,7 +6,7 @@
     <view class='news-info'>
       <view class='title'>{{list.title}}</view>
       <view class='time-info'>
-        <text class='date'>{{list.ptime}}</text>
+        <view class='date'>{{list.ptime}}  <text class='comment-coount right'>{{list.commentCount}}</text> </view>
       </view>
     </view>
   </navigator>

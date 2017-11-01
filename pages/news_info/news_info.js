@@ -27,11 +27,8 @@ Page({
         });
         that.news_comments(data);
         if(res.data && res.data.img.length!=0){
-          for (var i = 0; i < 1; i++) {
-           var str = "<!--IMG#" + i + "-->";
            var replaceStr = "<img src=" + (res.data.img[0])['src'] + ">";
-           res.data.body = res.data.body.replace(str, replaceStr);
-          }
+           res.data.body = res.data.body.replace("<!--IMG#0-->", replaceStr);
         }
         WxParse.wxParse('article', 'html', res.data.body, that, 5);
        

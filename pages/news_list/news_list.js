@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var data={
-      page:1
+      page:0
     }
     app.api.news_list(data)
       .then(res => {

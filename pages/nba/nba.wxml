@@ -1,7 +1,15 @@
+
 <view class="date-list">
-  <view class='date-item' data-time="{{list.pre_date}}" bindtap='selectDate'>上一日</view>
-  <view class='date-item' data-time="{{list.cur_date}}" bindtap='selectDate'> {{list.cur_date || "今日"}} </view>
-  <view class='date-item' data-time="{{list.next_date}}" bindtap='selectDate'>下一日 </view>
+  <view class='date-item icon-pre' data-time="{{list.pre_date}}" bindtap='selectDate'></view>
+  <view class='date-item' data-time="{{list.cur_date}}">
+   <picker mode="date" value="{{date}}" start="2016-01-01" end="2018-6-23" bindchange="bindDateChange">  
+    <view class="picker ">  
+    {{list.cur_date}}  <text class='icon-picker'></text>
+    </view>  
+  </picker> 
+   
+   </view>
+  <view class='date-item icon-next' data-time="{{list.next_date}}" bindtap='selectDate'> </view>
 </view>
 
 
@@ -29,7 +37,7 @@
     </navigator>
   </view>
 </view>
-<view wx:else class='no-data'>
+<view wx:if="{{list.list.length==0}}" class='no-data'>
   <view class='icon-nothing'></view>
   暂无数据
 </view>
