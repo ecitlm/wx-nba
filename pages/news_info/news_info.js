@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    item: []
+    item: [],
+    comments:[]
 
   },
 
@@ -15,7 +16,7 @@ Page({
   onLoad: function (e) {
 
     var data = {
-      docid: e.docid
+      docid: e.docid || "D230QPOC0005877U"
     }
     var that = this;
     app.api.news_info(data)
@@ -24,7 +25,8 @@ Page({
         that.setData({
           item: res.data
         });
-        if(res.data.img.length!=0){
+        that.news_comments(data);
+        if(res.data && res.data.img.length!=0){
           for (var i = 0; i < 1; i++) {
            var str = "<!--IMG#" + i + "-->";
            var replaceStr = "<img src=" + (res.data.img[0])['src'] + ">";
@@ -36,12 +38,25 @@ Page({
       })
       .catch(e => {
         console.error(e)
-        var article = "文章已经1删除";
+        var article = "文章已经删除";
         WxParse.wxParse('article', 'html', article, that, 5);
       });
-
   },
 
+    //获取评论
+  news_comments:function(data){
+    var that=this;
+    app.api.news_comments(data)
+      .then(res => {
+        console.log(res);
+        that.setData({
+          comments: res.data.reverse()
+        });
+      })
+      .catch(e => {
+        console.error(e)
+      });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

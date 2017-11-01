@@ -73,7 +73,11 @@ function news_list(params) {
   return fetchApi('Nba/new_list', params)
     .then(res => res.data)
 }
-
+//
+function news_comments(params) {
+  return fetchApi('Nba/news_comments', params)
+    .then(res => res.data)
+}
   
 function website(params) {
   return fetchApi('Nba/website', params)
@@ -89,6 +93,7 @@ module.exports = {
   team_info,
   Lineup,
   news_info,
+  news_comments,
   news_list,
   website
 }
