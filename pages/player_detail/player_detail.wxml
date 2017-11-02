@@ -1,87 +1,89 @@
-<view class="player-info">
-  <image class='player-logo' src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.portrait}}'></image>
-  <view class='player-name'>
-    <text class='p-name'>{{list.cnname}}</text>
-    <text class='player-place'>
+<view wx:if="{{list.length !=0}}">
+  <view class="player-info">
+    <image class='player-logo' src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.portrait}}'></image>
+    <view class='player-name'>
+      <text class='p-name'>{{list.cnname}}</text>
+      <text class='player-place'>
 {{list.position}}({{list.number}})/ {{list.teamname}}
 </text>
-  </view>
-</view>
-
-<!-- 球员数据 -->
-<view class='player-data'>
-  <view>
-    <text>{{list.pointsPG}}</text> 得分
-  </view>
-  <view>
-    <text>{{list.reboundsPG}}</text> 篮板
-  </view>
-  <view>
-    <text>{{list.assistsPG}}</text> 助攻
-  </view>
-  <view>
-    <text>{{list.stealsPG}}</text> 助攻
-  </view>
-</view>
-
-<!--基本信息  -->
-<view class='base-info'>
-  <view class='base-info-title'>基本信息</view>
-  <view class='base-info-item'>
-    <text class='base-info-item-title'>生日</text>{{list.birthdate}}
-  </view>
-  <view class='base-info-item'>
-    <text class='base-info-item-title'>出生地</text>{{list.birthplace || "-"}}
-  </view>
-  <view class='base-info-item'>
-    <text class='base-info-item-title'>薪金</text>{{list.yearsalary || "-"}}
+    </view>
   </view>
 
-  <view class='base-info-item'>
-    <text class='base-info-item-title'>身高/体重</text>{{list.height}}/{{list.weight}}
-  </view>
-  <view class='base-info-item' style='width:100%'>
-    <text class='base-info-item-title'>选秀</text>{{list.showing}}
-  </view>
-</view>
-
-<!--6宫格数据源  -->
-
-<view class='gird-9'>
-  <view class='base-info-title'>赛季数据</view>
-  <view class='gird-9-item'>
-    <text>{{list.games}}</text> 出场数
-  </view>
-  <view class='gird-9-item'>
-    <text>{{list.gamesStarted}}</text> 首发次
-  </view>
-  <view class='gird-9-item'>
-    <text>{{list.minutesPG}}</text> 时间
+  <!-- 球员数据 -->
+  <view class='player-data'>
+    <view>
+      <text>{{list.pointsPG}}</text> 得分
+    </view>
+    <view>
+      <text>{{list.reboundsPG}}</text> 篮板
+    </view>
+    <view>
+      <text>{{list.assistsPG}}</text> 助攻
+    </view>
+    <view>
+      <text>{{list.stealsPG}}</text> 助攻
+    </view>
   </view>
 
-  <view class='gird-9-item'>
-    <text>{{(list.fgPCT)}}</text> 投篮
+  <!--基本信息  -->
+  <view class='base-info'>
+    <view class='base-info-title'>基本信息</view>
+    <view class='base-info-item'>
+      <text class='base-info-item-title'>生日</text>{{list.birthdate}}
+    </view>
+    <view class='base-info-item'>
+      <text class='base-info-item-title'>出生地</text>{{list.birthplace || "-"}}
+    </view>
+    <view class='base-info-item'>
+      <text class='base-info-item-title'>薪金</text>{{list.yearsalary || "-"}}
+    </view>
+
+    <view class='base-info-item'>
+      <text class='base-info-item-title'>身高/体重</text>{{list.height}}/{{list.weight}}
+    </view>
+    <view class='base-info-item' style='width:100%'>
+      <text class='base-info-item-title'>选秀</text>{{list.showing}}
+    </view>
   </view>
 
+  <!--6宫格数据源  -->
 
-  <view class='gird-9-item'>
-    <text>{{list.threesPCT}}</text> 三分
+  <view class='gird-9'>
+    <view class='base-info-title'>赛季数据</view>
+    <view class='gird-9-item'>
+      <text>{{list.games}}</text> 出场数
+    </view>
+    <view class='gird-9-item'>
+      <text>{{list.gamesStarted}}</text> 首发次
+    </view>
+    <view class='gird-9-item'>
+      <text>{{list.minutesPG}}</text> 时间
+    </view>
+
+    <view class='gird-9-item'>
+      <text>{{(list.fgPCT)}}</text> 投篮
+    </view>
+
+
+    <view class='gird-9-item'>
+      <text>{{list.threesPCT}}</text> 三分
+    </view>
+
+    <view class='gird-9-item'>
+      <text>{{list.ftPCT}}</text> 罚球
+    </view>
+
+    <view class='gird-9-item'>
+      <text>{{list.offensiveReboundsPG}}</text> 前篮板
+    </view>
+
+    <view class='gird-9-item'>
+      <text>{{list.defensiveReboundsPG}}</text> 后篮板
+    </view>
+
+    <view class='gird-9-item'>
+      <text>{{list.stealsPG}}</text> 抢断
+    </view>
+
   </view>
-
-  <view class='gird-9-item'>
-    <text>{{list.ftPCT}}</text> 罚球
-  </view>
-
-  <view class='gird-9-item'>
-    <text>{{list.offensiveReboundsPG}}</text> 前篮板
-  </view>
-
-  <view class='gird-9-item'>
-    <text>{{list.defensiveReboundsPG}}</text> 后篮板
-  </view>
-
-  <view class='gird-9-item'>
-    <text>{{list.stealsPG}}</text> 抢断
-  </view>
-
 </view>

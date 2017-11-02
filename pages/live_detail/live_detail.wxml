@@ -1,0 +1,200 @@
+<view wx:if="{{list.length !=0}}">
+
+
+  <view class='live-gameheader'>
+    <view class="gameinfo">
+      <view class='team'>
+        <image src='{{list.t1_icon}}'></image>
+        <text>{{list.t1_name}}</text>
+      </view>
+      <view class='live-info'>
+        <text class='live-time'>{{list.match_status}} {{list.match_time}}</text>
+        <view class="live-score">
+          <text class="score">{{list.t1_point}}</text>
+          <text class="space"> : </text>
+          <text class="score">{{list.t2_point}}</text>
+        </view>
+      </view>
+
+      <view class='team'>
+        <image src="{{list.t2_icon}}"></image>
+        <text>{{list.t2_name}}</text>
+      </view>
+    </view>
+    <!--支持者  -->
+    <view class='like-progress'>
+      <view class='bar'>
+        <view class='left bar-line left-bar' style="width: {{list.circleVoteNumLeft*100/(list.circleVoteNumLeft+list.circleVoteNumRight)}}%"></view>
+        <view class='right bar-line'></view>
+      </view>
+      <text class='bar-num left' style=''>{{list.circleVoteNumLeft}}</text>
+      <text class='bar-num right'>{{list.circleVoteNumRight}}</text>
+    </view>
+  </view>
+
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">实时</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">视频</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">统计</view>
+  </view>
+  <view current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
+    <view class="swiper-item padding-lr-30  {{currentTab==0 ? 'active' : ''}}">
+      <view class='live-content'>
+        <view class='live-content-item' wx:for="{{content}}" wx:for-item="item">
+          <view class='liveroom_cuser'>
+            <image class='user-img' src='{{item.speaker_data.icon}}'></image>
+            <text class='live-user left'>{{item.speaker}}</text>
+            <text class='live-user-type left'>{{item.time}}</text>
+            <text class='live-score right'>{{item.suffix}}</text>
+          </view>
+
+          <view class='content-msg'>
+            <text class='text-msg'>{{item.content}}</text>
+            <image wx:if="{{item.image_src}}" bindtap='previewImage' data-url="{{item.image_src}}" src='{{item.image_src}}' mode="widthFix"></image>
+            <view class='img-msg' wx:if="{{item.match_data[0]}}">
+              <text>{{item.match_data[0].title}}</text>
+              <image class='img-msg-image' bindtap='previewImage' data-url="{{item.match_data[0].pic}}" wx:if="{{item.match_data[0].pic}}" src='{{item.match_data[0].pic}}'></image>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="swiper-item  {{currentTab==1 ? 'active' : ''}}">
+      <view> 暂无数据</view>
+    </view>
+    <view class="swiper-item  {{currentTab==2 ? 'active' : ''}}">
+      <view wx-if="technical.topplayer.home">
+        <view class='game-info-title padding-lr-30'>实时赛况</view>
+        <view class='thead'>
+          <text>球队</text>
+          <text>1节</text>
+          <text>2节</text>
+          <text>3节</text>
+          <text>4节</text>
+          <text>总分</text>
+        </view>
+        <view class="team-score">
+          <view class='table-image'>
+            <view class="table-image-1">
+              <image src="{{list.t1_icon}}"></image>
+            </view>
+            <view>
+              <image src="{{list.t2_icon}}"></image>
+            </view>
+          </view>
+          <view class='sec_scores'>
+            <view wx:for="{{list.sec_scores}}" wx:for-item="list" class="one-quarter">
+              <text>{{ list.score1 || "0"}}</text>
+              <text>{{list.score2 || "0"}}</text>
+            </view>
+          </view>
+          <view class='total-score'>
+            <text>{{list.t1_point}}</text>
+            <text>{{list.t2_point}}</text>
+          </view>
+        </view>
+        <!--最佳球员  -->
+        <view class='top-player'>
+          <view class='top-player-title'>
+            <text class='top-team-player-name'>{{list.t1_name}}</text>
+            <text class='top-team-player'>最佳球员</text>
+            <text class='top-team-player-name'>{{list.t2_name}}</text>
+          </view>
+          <view class='padding-lr-30' wx-if="{{technical.topplayer}}">
+            <!--数据  -->
+            <view class='team-top-play-item'>
+              <view wx:for="{{technical.topplayer.visit}}" wx:for-item="list">
+                <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
+                  <text class='left'>{{list.name || "=="}}</text>
+                </navigator>
+                <text class='right'>{{list.value || "=="}}</text>
+              </view>
+
+
+            </view>
+            <view class='data-title'>
+              <view>得分</view>
+              <view>篮板</view>
+              <view>助攻</view>
+              <view>抢断</view>
+              <view>盖帽</view>
+              <view>犯规</view>
+              <view>失误</view>
+            </view>
+            <view class='team-top-play-item'>
+              <view wx:for="{{technical.topplayer.home}}" wx:for-item="list">
+                <text class='left'>{{list.value  || "=="}}</text>
+                <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
+                  <text class='right'>{{list.name || "=="}}</text>
+                </navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <!--客场球员数据  -->
+        <view class='teamer-name'> {{list.t1_name}}</view>
+        <view class='player-data-list'>
+
+          <view class='player-data-header'>
+            <text> 球员</text>
+            <text> 得分</text>
+            <text> 篮板</text>
+            <text> 助攻</text>
+            <text>  投篮</text>
+            <text>  罚篮</text>
+            <text> 三分</text>
+          </view>
+          <view wx:for="{{technical.playStat.visit}}" wx:for-item="list">
+            <view wx:if="{{list}}" wx:for-index="index" class="player-data-item {{index%2 == 0 ? 'red' : 'f5f5f5'}}">
+              <navigator url="/pages/player_detail/player_detail?id={{list[0]}}">
+                <text>{{list[1]}}</text>
+              </navigator>
+              <text>{{list[2]}}</text>
+              <text>{{list[7]}}</text>
+              <text>{{list[8]}}</text>
+              <text>{{list[3]}}/{{list[4]}}</text>
+              <text>{{list[16]}}</text>
+              <text>{{list[5]}}/{{list[6]}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!--主场球员数据  -->
+
+        <view class='teamer-name'> {{list.t2_name}}</view>
+        <view class='player-data-list'>
+          <view class='player-data-header'>
+            <text> 球员</text>
+            <text> 得分</text>
+            <text> 篮板</text>
+            <text> 助攻</text>
+            <text>  投篮</text>
+            <text>  罚篮</text>
+            <text> 三分</text>
+
+
+          </view>
+          <view wx:for="{{technical.playStat.home}}" wx:for-item="list">
+            <view wx:if="{{list}}" wx:for-index="index" class="player-data-item {{index%2 == 0 ? 'red' : 'f5f5f5'}}">
+              <navigator url="/pages/player_detail/player_detail?id={{list[0]}}">
+                <text>{{list[1]}}</text>
+              </navigator>
+              <text>{{list[2]}}</text>
+              <text>{{list[7]}}</text>
+              <text>{{list[8]}}</text>
+              <text>{{list[3]}}/{{list[4]}}</text>
+              <text>{{list[16]}}</text>
+              <text>{{list[5]}}/{{list[6]}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:else>没有数据</view>
+
+    </view>
+  </view>
+</view>

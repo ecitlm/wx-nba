@@ -7,7 +7,6 @@
   <image src='{{item.icon}}' bindtap='previewImage' data-url="{{item.icon}}"></image>
   </view>
 </view>
-
 <view class='wrap '>
 <view class='line'></view>
 <view class='list-view icon-address' bindtap='openMap'>{{item.address}}</view>

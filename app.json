@@ -1,15 +1,13 @@
 {
   "pages": [
    
-    "pages/nba/nba",
+    "pages/index/index",
     "pages/about/about",
     "pages/news_list/news_list",
     "pages/news_info/news_info",
     "pages/team_info/team_info",
     "pages/player_detail/player_detail",
-    "pages/nba/live_detail",
-    "pages/index/index",
-    "pages/logs/logs",
+    "pages/live_detail/live_detail",
     "pages/team_rank/team_rank"
    
   ],

@@ -1,4 +1,4 @@
-<view class='article'>
+<view class='article' wx:if="{{item.length !=0}}">
   <view class='title'>
     {{item.title}}
     <view class='ptime'>{{item.ptime}}</view>
