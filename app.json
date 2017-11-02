@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/index/index",
     "pages/about/about",
     "pages/news_list/news_list",
@@ -9,7 +8,6 @@
     "pages/player_detail/player_detail",
     "pages/live_detail/live_detail",
     "pages/team_rank/team_rank"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
