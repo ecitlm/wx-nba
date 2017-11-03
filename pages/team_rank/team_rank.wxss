@@ -60,5 +60,6 @@ view.active {
   padding: 0 30rpx;
 }
 .t-body .team-item text:first-child,.t-head text:first-child{
-  text-align: left
+  text-align: left;
+  font-size: 24rpx;
 }

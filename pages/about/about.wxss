@@ -1,3 +1,6 @@
+text,view{
+  box-sizing: border-box
+}
 .a-head{
   box-sizing: border-box;
   width: 100%;

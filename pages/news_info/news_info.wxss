@@ -1,3 +1,7 @@
+text,view{
+  box-sizing: border-box
+}
+
 .article{
   box-sizing: border-box;
   padding:20rpx 30rpx;
