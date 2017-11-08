@@ -105,16 +105,59 @@
 
 
   </view>
-  <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">稍后</view>
+  <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">
+    <view class='select-mouth'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker icon-rili">
+          请选择月份：{{array[index]}} 月份
+        </view>
+      </picker>
+    </view>
 
+<view wx:if="{{schedule.list}}">
+    <view class="live_item" wx:for="{{schedule.list}}" wx:for-item="list">
+      <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
+        <view class="team">
+          <image src="{{list.visitteamlogo}}" class="team-logo"></image>
+          <view class="team-info">
+            <view class="team-score">{{list.visitscore}}</view>
+            <view class="team-name">{{list.visitteamname}}</view>
+          </view>
+        </view>
+        <view class="time">
+          <view>{{list.date}} 日</view>
+          <view>{{list.match_status || list.time}}{{list.match_time}}</view>
+
+        </view>
+        <view class="team">
+          <view class="team-info">
+            <view class="team-score">{{list.homescore }}</view>
+            <view class="team-name">{{list.hometeamname}}</view>
+          </view>
+          <image src="{{list.hometeamlogo}}" class="team-logo"></image>
+        </view>
+        <view class="team-news" wx:if="{{list.title}}">
+          <text class="iangle">战报</text> {{list.title}}
+        </view>
+      </navigator>
+    </view>
+     </view>
+     <view wx:if="{{schedule.list.length==0}}" class='no-data'>
+  <view class='icon-nothing'></view>
+  本月还没安排赛事
+</view>
+
+
+
+
+  </view>
   <view class="swiper-item   {{currentTab==2 ? 'active' : ''}}">
     <view class='list-player'>
       <view class='item-player' wx:for="{{playerList}}" wx:for-item="list">
         <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
           <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.logo}}'></image>
-          <text>{{list.position}}</text> 
+          <text>{{list.position}}</text>
           <view class='pname'>{{list.cnalias}}</view>
-
         </navigator>
       </view>
     </view>

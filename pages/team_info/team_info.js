@@ -1,13 +1,19 @@
 var app = getApp();
+var date = new Date;
+var month = date.getMonth()+1;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    array: [1,2,3,4,5,6,7,8,9,10,11,12],
+    index: month,  
     item: [],
+    teamId:"",
+    schedule:[],
     playerList:[],
-    currentTab: 0,        // tab切换 
+    currentTab: 1,        // tab切换 
+
   },
 
   /**
@@ -16,7 +22,11 @@ Page({
   onLoad: function (e) {
     this.team_info(e.teamId)
     this.Lineup(e.teamId);
-    //this.team_info(24);
+    this.setData({
+      teamId: e.teamId
+    });
+
+    this.team_schedule(this.data.index);
     
   },
 
@@ -56,8 +66,24 @@ Page({
         console.error(e)
       });
 
-  }
-  ,
+  },
+  team_schedule: function (mouth){
+    var that = this;
+    var params = {
+      teamId: parseInt(this.data.teamId) ,
+      mouth: mouth
+    };
+    app.api.team_schedule(params)
+      .then(res => {
+        console.log(res);
+        that.setData({
+          schedule: res.data
+        });
+      })
+      .catch(e => {
+        console.error(e)
+      });
+  },
 
   // 滑动切换tab 
   bindChange: function (e) {
@@ -74,6 +100,12 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+  bindPickerChange: function (e) {
+    this.setData({
+      index: e.detail.value
+    });
+    this.team_schedule(parseInt(e.detail.value)+1)
   },
 
   /**

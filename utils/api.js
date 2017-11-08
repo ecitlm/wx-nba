@@ -44,6 +44,11 @@ function team_info(params) {
     return fetchApi("Nba/team_info", params).then(res => res.data);
 }
 
+//球队赛程
+function team_schedule(params) {
+  return fetchApi("Nba/team_schedule", params).then(res => res.data);
+}
+
 //球队阵容
 function Lineup(params) {
     return fetchApi("Nba/Lineup", params).then(res => res.data);
@@ -62,6 +67,7 @@ function news_comments(params) {
     return fetchApi("Nba/news_comments", params).then(res => res.data);
 }
 
+
 //关于我
 function website(params) {
     return fetchApi("Nba/website", params).then(res => res.data);
@@ -78,5 +84,6 @@ module.exports = {
     news_info,
     news_comments,
     news_list,
+    team_schedule,
     website
 };
