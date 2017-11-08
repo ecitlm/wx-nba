@@ -9,10 +9,10 @@ Page({
     array: [1,2,3,4,5,6,7,8,9,10,11,12],
     index: month,  
     item: [],
-    teamId:"",
+    teamId:24,
     schedule:[],
     playerList:[],
-    currentTab: 1,        // tab切换 
+    currentTab: 0,        // tab切换 
 
   },
 
