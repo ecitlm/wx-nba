@@ -1,0 +1,8 @@
+.settings
+.settings/*
+.buildpath
+.project
+*.log
+.idea
+api.txt
+project.config.json
