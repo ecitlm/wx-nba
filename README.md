@@ -12,15 +12,16 @@ wechat app for nba
 * 球队进本信息接口
 * 球队球员阵容名单接口
 * 球员基本信息赛季数据接口
+* 球队82场比赛每月赛程
 * 30只球队排名数据接口
 * 篮球快讯新闻列表接口
 * 新闻详情接口
 * 新闻评论数据接口
 
-最新在线接口系统地址(目前使用的是是基于TP的第一版的接口),这一版更好一些 https://wxapp.it919.cn/wx/listAllApis.php、
+最新在线接口系统地址(目前使用的是是基于TP的第一版的接口),这一版更好一些 https://wxapp.it919.cn/wx/listAllApis.php
 
 
-![图片](https://user-gold-cdn.xitu.io/2017/11/3/80f7e486ab3c0dce0e936cb8b9e8e05e)
+![图片](https://dn-coding-net-production-pp.qbox.me/5a026a63-69e1-448d-a73b-597385139efa.png)
 
   ### 小程序界面
   > 界面整体有十几个、包含以上接口对应的UI界面、以下界面属于应用的截图界面
