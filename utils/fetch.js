@@ -1,10 +1,10 @@
 const Promise = require("./bluebird"); //为了兼容问题
 const md5 = require("./md5");
-const appkey = "wxnba201711";
+const appkey = "d8a318ae8500ca9d9b51376f525989c3";
 
 /**
- * 将参数+签名按照字典排序得到签名sign
- * @param {Object} obj   参数集合
+ * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
+ * @param {Object} obj   参数集合    
  */
 var getSign = function(obj) {
         for (var key in obj) {
@@ -13,14 +13,16 @@ var getSign = function(obj) {
             };
         }
         obj.appkey = appkey;
+        // obj.timestamp = new Date().getTime();//获取时间戳
         var keyArr = Object.keys(obj).sort();
         var newObj = {};
         var Kstr = "";
         for (var i = 0; i < keyArr.length; i++) {
             newObj[keyArr[i]] = obj[keyArr[i]];
-            Kstr += keyArr[i] + obj[keyArr[i]];
+            Kstr += obj[keyArr[i]];
         }
         delete obj["appkey"];
+        console.log(Kstr)
         return md5(Kstr);
     }
     /**
@@ -35,19 +37,17 @@ module.exports = function(api, path, params) {
         title: "加载中"
     });
     //添加时间戳和签名到请求的参数之中
-    var data = {
-        timestamp: new Date().valueOf(),
-        sign: getSign(params)
-    };
+    params.timestamp = new Date().valueOf(); //将时间戳加入请求参数data里面
+    params.sign = "";
+    params.sign = getSign(params); //将签名加入参数里面
 
     console.log(getSign(params));
     console.log(`${api}/${path}`);
-    console.log(Object.assign(data, params));
+    console.log(params)
     return new Promise((resolve, reject) => {
         wx.request({
             url: `${api}/${path}`,
-            //data: Object.assign({}, params), //如果这里需要合并签名时间戳参数时候可以这么写
-            data: Object.assign(data, params),
+            data: Object.assign({}, params), //如果这里需要合并签名时间戳参数时候可以这么写
             header: { "Content-Type": "json" },
             success: function(res) {
                 resolve(res);
@@ -59,4 +59,4 @@ module.exports = function(api, path, params) {
             }
         });
     });
-};
+};;
