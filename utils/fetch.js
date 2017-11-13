@@ -4,24 +4,23 @@ const appkey = "d8a318ae8500ca9d9b51376f525989c3";
 
 /**
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
- * @param {Object} obj   参数集合    
+ * @param {Object} params   参数集合    
  */
-var getSign = function(obj) {
-        for (var key in obj) {
-            if (!obj[key]) {
-                delete obj[key]
-            };
+var getSign = function(params) {
+        for (var key in params) {
+            if (!params[key]) {
+                delete params[key];
+            }
         }
-        obj.appkey = appkey;
-        // obj.timestamp = new Date().getTime();//获取时间戳
-        var keyArr = Object.keys(obj).sort();
+        params.appkey = appkey;
+        var keyArr = Object.keys(params).sort();
         var newObj = {};
         var Kstr = "";
         for (var i = 0; i < keyArr.length; i++) {
-            newObj[keyArr[i]] = obj[keyArr[i]];
-            Kstr += obj[keyArr[i]];
+            newObj[keyArr[i]] = params[keyArr[i]];
+            Kstr += params[keyArr[i]];
         }
-        delete obj["appkey"];
+        delete params["appkey"];
         console.log(Kstr)
         return md5(Kstr);
     }
@@ -36,7 +35,7 @@ module.exports = function(api, path, params) {
     wx.showLoading({
         title: "加载中"
     });
-    //添加时间戳和签名到请求的参数之中
+    //添加时间戳和签名到请求的参数之中、
     params.timestamp = new Date().valueOf(); //将时间戳加入请求参数data里面
     params.sign = "";
     params.sign = getSign(params); //将签名加入参数里面

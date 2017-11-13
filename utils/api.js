@@ -1,5 +1,5 @@
 const fetch = require("./fetch");
-const API_DOMAIN = "https://api.it919.cn/index.php/api";
+const API_DOMAIN = "https://api.it919.cn/index.php/api"; //接口请求地址
 
 /**
  * @param  {String} 接口地址   
