@@ -18,8 +18,8 @@ wechat app for nba
 * 新闻详情接口
 * 新闻评论数据接口
 
-最新在线接口系统地址(目前使用的是是基于TP的第一版的接口),这一版更好一些 https://wxapp.it919.cn/wx/listAllApis.php
-
+最新在线接口系统地址(目前使用的是是基于TP的第一版的接口),这一版更好一些  https://wxapp.it919.cn/wx/listAllApis.php
+https://github.com/ecitlm/wx-nba-api.git
 
 ![图片](https://dn-coding-net-production-pp.qbox.me/5a026a63-69e1-448d-a73b-597385139efa.png)
 
