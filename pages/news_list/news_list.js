@@ -7,27 +7,30 @@ Page({
    */
   data: {
     list: [],
+    page:0,
     footer:1
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.news_list(0)
+
+  },
+  news_list:function(page){
     var that = this;
-    var data={
-      page:0
+    var data = {
+      page: page
     }
     app.api.news_list(data)
       .then(res => {
-        console.log(res);
         that.setData({
-          list: res.data
+          list: (that.data.list).concat(res.data)
         });
       })
       .catch(e => {
         console.error(e)
       });
-
   },
 
   /**
@@ -69,6 +72,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+    this.setData({
+      page: this.data.page+1
+    });
+    this.news_list(this.data.page)
 
   },
 

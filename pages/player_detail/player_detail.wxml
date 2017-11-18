@@ -1,6 +1,6 @@
 <view wx:if="{{list.length !=0}}">
   <view class="player-info">
-    <image class='player-logo' src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.portrait}}'></image>
+    <image class='player-logo' src='{{list.portrait}}'></image>
     <view class='player-name'>
       <text class='p-name'>{{list.cnname}}</text>
       <text class='player-place'>

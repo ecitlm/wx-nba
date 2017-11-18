@@ -1,61 +1,81 @@
-const Promise = require("./bluebird"); //为了兼容问题
-const md5 = require("./md5");
-const appkey = "d8a318ae8500ca9d9b51376f525989c3";
+const Promise = require('./bluebird'); //为了兼容问题
+const md5 = require('./md5');
+const appkey = 'wxnba201711';
 
 /**
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
  * @param {Object} params   参数集合    
  */
 var getSign = function(params) {
-        for (var key in params) {
-            if (!params[key]) {
-                delete params[key];
-            }
+    for (var key in params) {
+        if (!params[key]) {
+            delete params[key];
         }
-        params.appkey = appkey;
-        var keyArr = Object.keys(params).sort();
-        var newObj = {};
-        var Kstr = "";
-        for (var i = 0; i < keyArr.length; i++) {
-            newObj[keyArr[i]] = params[keyArr[i]];
-            Kstr += params[keyArr[i]];
-        }
-        delete params["appkey"];
-        console.log(Kstr)
-        return md5(Kstr);
     }
-    /**
-     * 网络请求API接口
-     * @param  {String} api    api 根地址
-     * @param  {String} path   请求路径
-     * @param  {Object} params 参数
-     * @return {Promise}       包含抓取任务的Promise
-     */
+    params.appkey = appkey;
+    var keyArr = Object.keys(params).sort();
+    var newObj = {};
+    var Kstr = '';
+    for (var i = 0; i < keyArr.length; i++) {
+        newObj[keyArr[i]] = params[keyArr[i]];
+        Kstr += params[keyArr[i]];
+    }
+    delete params['appkey'];
+    return md5(Kstr);
+};
+
+/**
+ * 验证返回的的code码问题
+ * @param {*} resolve 
+ * @param {*} res 返回的data
+ */
+var checkCode = function(resolve, res) {
+    if (res.ret == 200) {
+        resolve(res);
+    } else if (res.ret == 404) {
+        wx.showModal({
+            title: '',
+            showCancel: false,
+            content: res.msg,
+        });
+    } else if ((res.ret = 406)) {
+        wx.showModal({
+            title: '',
+            showCancel: false,
+            content: res.msg,
+        });
+    } else {}
+};
+
+/**
+ * 网络请求API接口
+ * @param  {String} api    api 根地址
+ * @param  {String} path   请求路径
+ * @param  {Object} params 参数
+ * @return {Promise}       包含抓取任务的Promise
+ */
 module.exports = function(api, path, params) {
     wx.showLoading({
-        title: "加载中"
+        title: '加载中',
     });
     //添加时间戳和签名到请求的参数之中、
     params.timestamp = new Date().valueOf(); //将时间戳加入请求参数data里面
-    params.sign = "";
+    params.sign = '';
     params.sign = getSign(params); //将签名加入参数里面
-
-    console.log(getSign(params));
-    console.log(`${api}/${path}`);
-    console.log(params)
+    console.log(`${api}${path}`);
     return new Promise((resolve, reject) => {
         wx.request({
-            url: `${api}/${path}`,
+            url: `${api}${path}`,
             data: Object.assign({}, params), //如果这里需要合并签名时间戳参数时候可以这么写
-            header: { "Content-Type": "json" },
+            header: { 'Content-Type': 'json' },
             success: function(res) {
-                resolve(res);
+                checkCode(resolve, res.data);
                 wx.hideLoading();
             },
             fail: function(err) {
                 wx.hideLoading();
                 reject(err);
-            }
+            },
         });
     });
-};;
+};
