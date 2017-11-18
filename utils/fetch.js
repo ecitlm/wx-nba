@@ -16,7 +16,7 @@ var getSign = function(params) {
     var keyArr = Object.keys(params).sort();
     var newObj = {};
     var Kstr = '';
-    for (var i = 0; i < keyArr.length; i++) {
+    for (var i in keyArr) {
         newObj[keyArr[i]] = params[keyArr[i]];
         Kstr += params[keyArr[i]];
     }
