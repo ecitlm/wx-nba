@@ -29,6 +29,41 @@ https://github.com/ecitlm/wx-nba-api.git
 * 每天赛事直播列表(文字直播详情)
 * wxParse(富文本解析, 支持HTML和Markdown) 实现富文本资讯详情
 
+### 关于接口签名sign 生成问题
+* 接口请求签名，首先客户端与服务端约定好一个`appkey`
+* 排除签名参数（sign和接口的service）
+* 将剩下的全部参数和appkey，按参数名字进行字典升序排序
+* 将排序好的参数，全部用字符串拼接起来
+* 进行md5运算，生成签名`sign
+
+`js签名方法生成sign`
+```javascript
+/**
+ * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
+ * @param {Object} params   参数集合    
+ */
+var getSign = function(params) {
+    for (var key in params) {
+        if (!params[key]) {
+            delete params[key];
+        }
+    }
+    params.appkey = appkey;
+    var keyArr = Object.keys(params).sort();
+    var newObj = {};
+    var Kstr = '';
+    for (var i = 0; i < keyArr.length; i++) {
+        newObj[keyArr[i]] = params[keyArr[i]];
+        Kstr += params[keyArr[i]];
+    }
+    delete params['appkey']; //从参数集合中剔除appkey参数传递
+    return md5(Kstr);
+};
+
+```
+
+
+
 
   ### 小程序界面
   > 界面整体有十几个、包含以上接口对应的UI界面、以下界面属于应用的截图界面
