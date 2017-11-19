@@ -4,7 +4,7 @@
     <view class="foot-item   {{footer==0 ? 'active' : ''}}">
       <navigator url="/pages/nba/nba">
         <view class='icon icon-ball icon-ball-active '></view>
-        <text>赛事</text>
+        <text>赛程</text>
       </navigator>
     </view>
     <view class="foot-item   {{footer==1 ? 'active' : ''}}">

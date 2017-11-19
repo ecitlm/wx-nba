@@ -38,8 +38,8 @@
   width: 33.33%;
   float: left;
   text-align: center;
-  line-height: 60rpx;
-  height: 60rpx;
+  line-height: 70rpx;
+  height: 70rpx;
   overflow: hidden
 }
 .tbody text:first-child,.header text:first-child{
@@ -53,7 +53,7 @@ text.active{
 }
 .tbody navigator{
   display: block;
-  height: 60rpx;
+  height: 70rpx;
 }
 .f5f5f5{
   background: #f5f5f5
