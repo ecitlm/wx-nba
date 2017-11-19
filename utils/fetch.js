@@ -32,13 +32,13 @@ var getSign = (params) => {
 var checkCode = (resolve, res) => {
     if (res.ret == 200) {
         resolve(res);
-    } else if (res.ret == 404) {
+    } else if (res.ret == 400) { //确实必要字段
         wx.showModal({
             title: '',
             showCancel: false,
             content: res.msg,
         });
-    } else if ((res.ret = 406)) {
+    } else if ((res.ret = 406)) { //签名错误
         wx.showModal({
             title: '',
             showCancel: false,
@@ -62,7 +62,6 @@ module.exports = function(api, path, params) {
     params.timestamp = new Date().valueOf(); //将时间戳加入请求参数data里面
     params.sign = '';
     params.sign = getSign(params); //将签名加入参数里面
-    console.log(`${api}${path}`);
     return new Promise((resolve, reject) => {
         wx.request({
             url: `${api}${path}`,
