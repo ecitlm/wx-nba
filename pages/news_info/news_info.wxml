@@ -12,7 +12,7 @@
     <view class='title'>评论</view>
     <view class='comment-item' wx:for="{{comments}}" wx:for-item="comments">
         <view class='left'>
-            <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{comments.user.avatar}}'></image>
+            <image src='{{comments.user.avatar}}'></image>
         </view>
         <view class='right'>
             <view class='user-name'>{{comments.user.nickname}}</view>

@@ -1,3 +1,6 @@
+<wxs module="util">
+    var toFixed = function(param) { return parseFloat(param*100).toFixed(1)+"%"; }; module.exports = { toFixed: toFixed }
+</wxs>
 <view wx:if="{{list.length !=0}}">
     <view class="player-info">
         <image class='player-logo' src='{{list.portrait}}'></image>
@@ -61,16 +64,16 @@
         </view>
 
         <view class='gird-9-item'>
-            <text>{{(list.fgPCT)}}</text> 投篮
+            <text> {{util.toFixed(list.fgPCT)}}</text> 投篮
         </view>
 
 
         <view class='gird-9-item'>
-            <text>{{list.threesPCT}}</text> 三分
+            <text>{{util.toFixed(list.threesPCT)}}</text> 三分
         </view>
 
         <view class='gird-9-item'>
-            <text>{{list.ftPCT}}</text> 罚球
+            <text>{{util.toFixed(list.ftPCT)}}</text> 罚球
         </view>
 
         <view class='gird-9-item'>

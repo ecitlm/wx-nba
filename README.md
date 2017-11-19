@@ -34,7 +34,7 @@ https://github.com/ecitlm/wx-nba-api.git
 * 排除签名参数（sign和接口的service）
 * 将剩下的全部参数和appkey，按参数名字进行字典升序排序
 * 将排序好的参数，全部用字符串拼接起来
-* 进行md5运算，生成签名`sign
+* 进行md5运算，生成签名`sign`
 
 `js签名方法生成sign`
 ```javascript
@@ -42,7 +42,7 @@ https://github.com/ecitlm/wx-nba-api.git
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
  * @param {Object} params   参数集合    
  */
-var getSign = function(params) {
+var getSign = (params) => {
     for (var key in params) {
         if (!params[key]) {
             delete params[key];

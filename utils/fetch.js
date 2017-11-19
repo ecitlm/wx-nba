@@ -6,7 +6,7 @@ const appkey = 'wxnba201711';
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
  * @param {Object} params   参数集合    
  */
-var getSign = function(params) {
+var getSign = (params) => {
     for (var key in params) {
         if (!params[key]) {
             delete params[key];
@@ -29,7 +29,7 @@ var getSign = function(params) {
  * @param {*} resolve 
  * @param {*} res 返回的data
  */
-var checkCode = function(resolve, res) {
+var checkCode = (resolve, res) => {
     if (res.ret == 200) {
         resolve(res);
     } else if (res.ret == 404) {
