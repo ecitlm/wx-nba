@@ -1,165 +1,165 @@
 <view class="team-info-head" style="background:#{{item.color}}">
-  <view class='head-info left'>
-    <text>{{item.cnalias}}</text>
-    <text>历史总冠军{{item.historychampion}}次</text>
-  </view>
-  <view class='team-logo left'>
-    <image src='{{item.icon}}'></image>
-  </view>
-  <view class='head-info left text-right'>
-    <text>{{item.wins}}胜{{item.losses}}负</text>
-    <text>{{item.conference}}排名第{{item.conferenceseed}}</text>
-  </view>
+    <view class='head-info left'>
+        <text>{{item.cnalias}}</text>
+        <text>历史总冠军{{item.historychampion}}次</text>
+    </view>
+    <view class='team-logo left'>
+        <image src='{{item.icon}}'></image>
+    </view>
+    <view class='head-info left text-right'>
+        <text>{{item.wins}}胜{{item.losses}}负</text>
+        <text>{{item.conference}}排名第{{item.conferenceseed}}</text>
+    </view>
 </view>
 
 
 <!--具体信息  -->
 <view class="swiper-tab">
-  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">数据</view>
-  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">赛程</view>
-  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">阵容</view>
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">数据</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">赛程</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">阵容</view>
 </view>
 <view current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
-  <view class="swiper-item   {{currentTab==0 ? 'active' : ''}}">
-    <view class='teamHonor'>
-      <view class='honor-item '>
-        <view class='icon rank'></view>
-        {{item.division}}第{{item.divisionseed}}
-      </view>
-      <view class='honor-item'>
-        <view class='icon no1'></view>
-        夺冠{{item.historychampion}}次
-      </view>
-      <view class='honor-item'>
-        <view class='icon master'></view>
-        {{item.coach}}
-      </view>
+    <view class="swiper-item   {{currentTab==0 ? 'active' : ''}}">
+        <view class='teamHonor'>
+            <view class='honor-item '>
+                <view class='icon rank'></view>
+                {{item.division}}第{{item.divisionseed}}
+            </view>
+            <view class='honor-item'>
+                <view class='icon no1'></view>
+                夺冠{{item.historychampion}}次
+            </view>
+            <view class='honor-item'>
+                <view class='icon master'></view>
+                {{item.coach}}
+            </view>
+        </view>
+        <!--赛季数据  -->
+        <view class='skin-statsTech'>
+            <view class='t-head'>
+                <text>本赛季</text>
+                <text>得分</text>
+                <text>篮板</text>
+                <text>助攻</text>
+                <text>命中率</text>
+            </view>
+            <view class='t-body'>
+                <text>主场</text>
+                <text>{{item.homePoints}}</text>
+                <text>{{item.homeRebounds}}</text>
+                <text>{{item.homeAssists}}</text>
+                <text>{{item.homeFgMade}}</text>
+            </view>
+            <view class='t-body'>
+                <text>客场</text>
+                <text>{{item.awayPoints}}</text>
+                <text>{{item.awayRebounds}}</text>
+                <text>{{item.awayAssists}}</text>
+                <text>{{item.awayFgMade}}</text>
+            </view>
+
+            <!--得分数据  -->
+            <view class='data-rank'>
+                <view class="data-rank-title">
+                    <text class='left'>场均得分 {{item.pointsPG}}</text>
+                    <text class='right'>联盟排名 {{item.pointsConference}}</text>
+                </view>
+                <view class='data-rank-item' wx:for="{{item.pointsarr}}" wx:for-item="list">
+                    <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
+                        <text class='left'>{{index+1}}. {{list.playername}}</text>
+                        <text class='right'>{{list.data}}</text>
+                    </navigator>
+
+                </view>
+            </view>
+
+            <!--篮板数据  -->
+            <view class='data-rank'>
+                <view class="data-rank-title">
+                    <text class='left'>场均篮板 {{item.reboundsPG}}</text>
+                    <text class='right'>联盟排名 {{item.reboundsConference}}</text>
+                </view>
+                <view class='data-rank-item' wx:for="{{item.reboundsarr}}" wx:for-item="list">
+                    <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
+                        <text class='left'>{{index+1}}. {{list.playername}}</text>
+                        <text class='right'>{{list.data}}</text>
+                    </navigator>
+                </view>
+            </view>
+
+            <!--助攻数据  -->
+            <view class='data-rank'>
+                <view class="data-rank-title">
+                    <text class='left'>场均助攻 {{item.assistsPG}}</text>
+                    <text class='right'>联盟排名 {{item.assistsConference}}</text>
+                </view>
+                <view class='data-rank-item' wx:for="{{item.assistsarr}}" wx:for-item="list">
+                    <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
+                        <text class='left'>{{index+1}}. {{list.playername}}</text>
+                        <text class='right'>{{list.data}}</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+
+
     </view>
-    <!--赛季数据  -->
-    <view class='skin-statsTech'>
-      <view class='t-head'>
-        <text>本赛季</text>
-        <text>得分</text>
-        <text>篮板</text>
-        <text>助攻</text>
-        <text>命中率</text>
-      </view>
-      <view class='t-body'>
-        <text>主场</text>
-        <text>{{item.homePoints}}</text>
-        <text>{{item.homeRebounds}}</text>
-        <text>{{item.homeAssists}}</text>
-        <text>{{item.homeFgMade}}</text>
-      </view>
-      <view class='t-body'>
-        <text>客场</text>
-        <text>{{item.awayPoints}}</text>
-        <text>{{item.awayRebounds}}</text>
-        <text>{{item.awayAssists}}</text>
-        <text>{{item.awayFgMade}}</text>
-      </view>
+    <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">
+        <view class='select-mouth'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker icon-rili">
+                    请选择月份：{{array[index]}} 月份
+                </view>
+            </picker>
+        </view>
 
-      <!--得分数据  -->
-      <view class='data-rank'>
-        <view class="data-rank-title">
-          <text class='left'>场均得分 {{item.pointsPG}}</text>
-          <text class='right'>联盟排名 {{item.pointsConference}}</text>
-        </view>
-        <view class='data-rank-item' wx:for="{{item.pointsarr}}" wx:for-item="list">
-          <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
-            <text class='left'>{{index+1}}. {{list.playername}}</text>
-            <text class='right'>{{list.data}}</text>
-          </navigator>
+        <view wx:if="{{schedule.list}}">
+            <view class="live_item" wx:for="{{schedule.list}}" wx:for-item="list">
+                <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
+                    <view class="team">
+                        <image src="{{list.visitteamlogo}}" class="team-logo"></image>
+                        <view class="team-info">
+                            <view class="team-score">{{list.visitscore}}</view>
+                            <view class="team-name">{{list.visitteamname}}</view>
+                        </view>
+                    </view>
+                    <view class="time">
+                        <view>{{list.date}} 日</view>
+                        <view>{{list.match_status || list.time}}{{list.match_time}}</view>
 
+                    </view>
+                    <view class="team">
+                        <view class="team-info">
+                            <view class="team-score">{{list.homescore }}</view>
+                            <view class="team-name">{{list.hometeamname}}</view>
+                        </view>
+                        <image src="{{list.hometeamlogo}}" class="team-logo"></image>
+                    </view>
+                    <view class="team-news" wx:if="{{list.title}}">
+                        <text class="iangle">战报</text> {{list.title}}
+                    </view>
+                </navigator>
+            </view>
         </view>
-      </view>
+        <view wx:if="{{schedule.list.length==0}}" class='no-data'>
+            <view class='icon-nothing'></view>
+            本月还没安排赛事
+        </view>
 
-      <!--篮板数据  -->
-      <view class='data-rank'>
-        <view class="data-rank-title">
-          <text class='left'>场均篮板 {{item.reboundsPG}}</text>
-          <text class='right'>联盟排名 {{item.reboundsConference}}</text>
-        </view>
-        <view class='data-rank-item' wx:for="{{item.reboundsarr}}" wx:for-item="list">
-          <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
-            <text class='left'>{{index+1}}. {{list.playername}}</text>
-            <text class='right'>{{list.data}}</text>
-          </navigator>
-        </view>
-      </view>
 
-      <!--助攻数据  -->
-      <view class='data-rank'>
-        <view class="data-rank-title">
-          <text class='left'>场均助攻 {{item.assistsPG}}</text>
-          <text class='right'>联盟排名 {{item.assistsConference}}</text>
-        </view>
-        <view class='data-rank-item' wx:for="{{item.assistsarr}}" wx:for-item="list">
-          <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
-            <text class='left'>{{index+1}}. {{list.playername}}</text>
-            <text class='right'>{{list.data}}</text>
-          </navigator>
-        </view>
-      </view>
+
+
     </view>
-
-
-  </view>
-  <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">
-    <view class='select-mouth'>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <view class="picker icon-rili">
-          请选择月份：{{array[index]}} 月份
+    <view class="swiper-item   {{currentTab==2 ? 'active' : ''}}">
+        <view class='list-player'>
+            <view class='item-player' wx:for="{{playerList}}" wx:for-item="list">
+                <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
+                    <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.logo}}'></image>
+                    <text>{{list.position}}</text>
+                    <view class='pname'>{{list.cnalias}}</view>
+                </navigator>
+            </view>
         </view>
-      </picker>
     </view>
-
-<view wx:if="{{schedule.list}}">
-    <view class="live_item" wx:for="{{schedule.list}}" wx:for-item="list">
-      <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
-        <view class="team">
-          <image src="{{list.visitteamlogo}}" class="team-logo"></image>
-          <view class="team-info">
-            <view class="team-score">{{list.visitscore}}</view>
-            <view class="team-name">{{list.visitteamname}}</view>
-          </view>
-        </view>
-        <view class="time">
-          <view>{{list.date}} 日</view>
-          <view>{{list.match_status || list.time}}{{list.match_time}}</view>
-
-        </view>
-        <view class="team">
-          <view class="team-info">
-            <view class="team-score">{{list.homescore }}</view>
-            <view class="team-name">{{list.hometeamname}}</view>
-          </view>
-          <image src="{{list.hometeamlogo}}" class="team-logo"></image>
-        </view>
-        <view class="team-news" wx:if="{{list.title}}">
-          <text class="iangle">战报</text> {{list.title}}
-        </view>
-      </navigator>
-    </view>
-     </view>
-     <view wx:if="{{schedule.list.length==0}}" class='no-data'>
-  <view class='icon-nothing'></view>
-  本月还没安排赛事
-</view>
-
-
-
-
-  </view>
-  <view class="swiper-item   {{currentTab==2 ? 'active' : ''}}">
-    <view class='list-player'>
-      <view class='item-player' wx:for="{{playerList}}" wx:for-item="list">
-        <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
-          <image src='https://coding.it919.cn/index.php/api/Nba/img?imgurl={{list.logo}}'></image>
-          <text>{{list.position}}</text>
-          <view class='pname'>{{list.cnalias}}</view>
-        </navigator>
-      </view>
-    </view>
-  </view>
 </view>

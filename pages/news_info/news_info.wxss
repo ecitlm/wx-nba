@@ -1,80 +1,91 @@
-text,view{
-  box-sizing: border-box
+text,
+view {
+    box-sizing: border-box
 }
 
-.article{
-  box-sizing: border-box;
-  padding:20rpx 30rpx;
-  width: 100%;
-}
-.article .title{
-  font-size: 36rpx;
-  display: block;
-  border-bottom: 1px solid #e3e3e3;
-  padding-bottom:8px;
-  margin-bottom: 8px;
-  font-weight: 700
-}
-.ptime{
-  font-size: 24rpx;
-  color: #666;
-  padding-top: 3px;
-  font-weight: 400
-}
-.wxParse{
-  font-size: 28rpx;
-  color: #333
+.article {
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+    width: 100%;
 }
 
-.wxParse image{
-  width: 100% !important;
-}
-.comment-wrap{
-  border-top: 10px solid #f5f5f5
+.article .title {
+    font-size: 36rpx;
+    display: block;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-weight: 700
 }
 
-.comment-wrap .title{
-  font-size: 28rpx;
-  border-left: 3px solid #00AA98;
-  padding-left: 10px;
-  margin: 5px;
+.ptime {
+    font-size: 24rpx;
+    color: #666;
+    padding-top: 3px;
+    font-weight: 400
 }
+
+.wxParse {
+    font-size: 28rpx;
+    color: #333
+}
+
+.wxParse image {
+    width: 100% !important;
+}
+
+.comment-wrap {
+    border-top: 10px solid #f5f5f5
+}
+
+.comment-wrap .title {
+    font-size: 28rpx;
+    border-left: 3px solid #00AA98;
+    padding-left: 10px;
+    margin: 5px;
+}
+
 .comment-item {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15rpx 30rpx;
-  border-bottom:1px solid  #e3e3e3;
-  float: left
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15rpx 30rpx;
+    border-bottom: 1px solid #e3e3e3;
+    float: left
+}
 
+.comment-item .left {
+    width: 80rpx
 }
-.comment-item .left{
-  width: 80rpx
-}
-.comment-item .left image{
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 50%;
-  border:1px solid #e3e3e3
 
+.comment-item .left image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3
 }
-.comment-item .right{
-  float: left;
-   width: 610rpx;
-   font-size: 28rpx;
+
+.comment-item .right {
+    float: left;
+    width: 610rpx;
+    font-size: 28rpx;
 }
-.comment-item .right .user-name{
-  color: #00AA98
+
+.comment-item .right .user-name {
+    color: #00AA98
 }
-.comment-item .right  .time{
-  font-size: 24rpx;
-  color: #666;
-  padding: 3px 0
+
+.comment-item .right .time {
+    font-size: 24rpx;
+    color: #666;
+    padding: 3px 0
 }
-.comment-item .right .content{
-  font-size: 26rpx;
+
+.comment-item .right .content {
+    font-size: 26rpx;
 }
-.comment-item .right .address{
-  font-size: 24rpx;
-  color: #666;
-  padding: 3px 0
+
+.comment-item .right .address {
+    font-size: 24rpx;
+    color: #666;
+    padding: 3px 0
 }

@@ -1,45 +1,42 @@
-
 <view class="date-list">
-  <view class='date-item icon-pre' data-time="{{list.pre_date}}" bindtap='selectDate'></view>
-  <view class='date-item' data-time="{{list.cur_date}}">
-   <picker mode="date" value="{{date}}" start="2016-01-01" end="2018-6-23" bindchange="bindDateChange">  
-    <view class="picker ">  
-    {{list.cur_date}}  <text class='icon-picker'></text>
-    </view>  
-  </picker> 
-   
-   </view>
-  <view class='date-item icon-next' data-time="{{list.next_date}}" bindtap='selectDate'> </view>
+    <view class='date-item icon-pre' data-time="{{list.pre_date}}" bindtap='selectDate'></view>
+    <view class='date-item' data-time="{{list.cur_date}}">
+        <picker mode="date" value="{{date}}" start="2016-01-01" end="2018-6-23" bindchange="bindDateChange">
+            <view class="picker ">
+                {{list.cur_date}} <text class='icon-picker'></text>
+            </view>
+        </picker>
+
+    </view>
+    <view class='date-item icon-next' data-time="{{list.next_date}}" bindtap='selectDate'> </view>
 </view>
-
-
 <view wx:if="{{list.list}}">
-  <view class="live_item" wx:for="{{list.list}}" wx:for-item="list">
-    <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
-      <view class="team">
-        <image src="{{list.visitteamlogo}}" class="team-logo"></image>
-        <view class="team-info">
-          <view class="team-score">{{list.visitscore}}</view>
-          <view class="team-name">{{list.visitteamname}}</view>
-        </view>
-      </view>
-      <view class="time">{{list.match_status || list.time}}{{list.match_time}}</view>
-      <view class="team">
-        <view class="team-info">
-          <view class="team-score">{{list.homescore }}</view>
-          <view class="team-name">{{list.hometeamname}}</view>
-        </view>
-        <image src="{{list.hometeamlogo}}" class="team-logo"></image>
-      </view>
-      <view class="team-news" wx:if="{{list.title}}">
-        <text class="iangle">战报</text> {{list.title}}
-      </view>
-    </navigator>
-  </view>
+    <view class="live_item" wx:for="{{list.list}}" wx:for-item="list">
+        <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
+            <view class="team">
+                <image src="{{list.visitteamlogo}}" class="team-logo"></image>
+                <view class="team-info">
+                    <view class="team-score">{{list.visitscore}}</view>
+                    <view class="team-name">{{list.visitteamname}}</view>
+                </view>
+            </view>
+            <view class="time">{{list.match_status || list.time}}{{list.match_time}}</view>
+            <view class="team">
+                <view class="team-info">
+                    <view class="team-score">{{list.homescore }}</view>
+                    <view class="team-name">{{list.hometeamname}}</view>
+                </view>
+                <image src="{{list.hometeamlogo}}" class="team-logo"></image>
+            </view>
+            <view class="team-news" wx:if="{{list.title}}">
+                <text class="iangle">战报</text> {{list.title}}
+            </view>
+        </navigator>
+    </view>
 </view>
 <view wx:if="{{list.list.length==0}}" class='no-data'>
-  <view class='icon-nothing'></view>
-  暂无数据
+    <view class='icon-nothing'></view>
+    暂无数据
 </view>
 
 <!--刷新按钮  -->
