@@ -1,0 +1,27 @@
+<view class="stats-nav">
+  <text data-t="pt" class="{{current=='pt' ? 'active' : ''}}" data-name="篮板" bindtap='tabNav'>得分</text>
+  <text data-t="rb" class="{{current=='rb' ? 'active' : ''}}" data-name="篮板" bindtap='tabNav'>篮板</text>
+  <text data-t="at" class="{{current=='at' ? 'active' : ''}}" data-name="助攻" bindtap='tabNav'>助攻</text>
+  <text data-t="st" class="{{current=='st' ? 'active' : ''}}" data-name="抢断" bindtap='tabNav'>抢断</text>
+  <text data-t="bk" class="{{current=='bk' ? 'active' : ''}}" data-name="盖帽" bindtap='tabNav'>盖帽</text>
+  <text data-t="to" class="{{current=='to' ? 'active' : ''}}" data-name="失误" bindtap='tabNav'>失误</text>
+  <text class="{{current=='tp' ? 'active' : ''}}" data-t="tp" data-name="三分" bindtap='tabNav'>三分</text>
+  <text class="{{current=='fo' ? 'active' : ''}}" data-t="fo" data-name="犯规" bindtap='tabNav'>犯规</text>
+  <text class="{{current=='ftp' ? 'active' : ''}}" data-t="ftp" data-name="罚球" bindtap='tabNav'>罚球</text>
+  <text class="{{current=='sht' ? 'active' : ''}}" data-t="sht" data-name="神投" bindtap='tabNav'>神投</text>
+</view>
+<view class='table'>
+  <view class='header'>
+    <text>球员</text>
+    <text>场均{{name}}</text>
+    <text>总{{name}}</text>
+  </view>
+  <view class='tbody'>
+    <navigator wx:for="{{stats.record}}" wx:for-item="item" url="/pages/player_detail/player_detail?id={{item.playerid}}" class="{{index%2 == 0 ? 'red' : 'f5f5f5'}}">
+      <text>{{index+1}}.{{item.playername}}</text>
+      <text>{{item.avgdata}}</text>
+      <text>{{item.totaldata}}</text>
+    </navigator>
+
+  </view>
+</view>

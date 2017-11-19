@@ -66,7 +66,10 @@ function news_list(params) {
 function news_comments(params) {
     return fetchApi("Nba.news_comments", params).then(res => res);
 }
-
+//球员数据排行榜
+function player_top(params) {
+    return fetchApi("Nba.player_top", params).then(res => res);
+}
 
 //关于我
 function website(params) {
@@ -85,5 +88,6 @@ module.exports = {
     news_comments,
     news_list,
     team_schedule,
+    player_top,
     website
 };

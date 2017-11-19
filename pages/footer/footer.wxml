@@ -20,9 +20,9 @@
       </navigator>
     </view>
     <view class='foot-item'>
-      <navigator url="/pages/about/about">
+      <navigator url="/pages/stats/stats">
       <view class='icon icon-about'></view>
-      关于
+      统计
        </navigator>
     </view>
 
