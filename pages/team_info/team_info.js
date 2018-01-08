@@ -1,6 +1,6 @@
 var app = getApp();
 var date = new Date;
-var month = date.getMonth() + 1;
+var month = date.getMonth()+1;
 Page({
     /**
      * 页面的初始数据
