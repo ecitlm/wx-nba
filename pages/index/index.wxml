@@ -40,5 +40,5 @@
 </view>
 <!--刷新按钮  -->
 <view class='refesh' data-time="{{list.cur_date}}" bindtap='selectDate'></view>
-<import src="../footer/footer.wxml" />
-<template is='footer' data='{{footer}}'></template>
+<!-- <import src="../footer/footer.wxml" />
+<template is='footer' data='{{footer}}'></template> -->

@@ -10,6 +10,38 @@
     "pages/team_rank/team_rank",
     "pages/stats/stats"
   ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#00aa98",
+    "position": "bottom",
+    "borderStyle": "block",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "赛事直播",
+        "iconPath": "static/images/ball.png",
+        "selectedIconPath": "static/images/ball-active.png"
+      },
+      {
+        "pagePath": "pages/news_list/news_list",
+        "text": "NBA资讯",
+        "iconPath": "static/images/news.png",
+        "selectedIconPath": "static/images/news-active.png"
+      },
+      {
+        "pagePath": "pages/team_rank/team_rank",
+        "text": "球队战绩",
+        "iconPath": "static/images/rank.png",
+        "selectedIconPath": "static/images/rank-active.png"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "数据统计",
+        "iconPath": "static/images/stats.png",
+        "selectedIconPath": "static/images/stats-active.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00AA98",
