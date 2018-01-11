@@ -8,7 +8,7 @@ Page({
     data: {
         list: [],
         page: 0,
-        footer: 1
+        isShow: false, 
     },
     /**
      * 生命周期函数--监听页面加载
@@ -25,6 +25,7 @@ Page({
         app.api.news_list(data)
             .then(res => {
                 that.setData({
+                    isShow: true,
                     list: (that.data.list).concat(res.data)
                 });
             })

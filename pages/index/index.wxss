@@ -25,7 +25,7 @@
     background: #fff;
     box-sizing: border-box;
     padding: 30rpx 10px;
-    box-shadow: inset 0px 1px 1px -1px #999;
+    border-bottom: 1rpx solid #e3e3e3
 }
 
 .team {

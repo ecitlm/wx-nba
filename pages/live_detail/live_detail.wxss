@@ -255,7 +255,7 @@ view.active {
     height: 60rpx;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1rpx solid #e3e3e3;
     float: left
 }
 
@@ -274,7 +274,7 @@ view.active {
     width: 100%;
     display: block;
     height: 60rpx;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1rpx solid #e3e3e3
 }
 
 .total-score {
@@ -287,7 +287,7 @@ view.active {
     width: 100%;
     display: block;
     height: 60rpx;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1rpx solid #e3e3e3
 }
 
 .top-player {
@@ -342,7 +342,7 @@ view.active {
 
 .data-title view {
     display: block;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1rpx solid #e3e3e3;
     height: 80rpx;
     line-height: 80rpx;
 }
@@ -353,7 +353,7 @@ view.active {
     font-size: 28rpx;
     height: 80rpx;
     line-height: 80rpx;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1rpx solid #e3e3e3;
     overflow: hidden
 }
 

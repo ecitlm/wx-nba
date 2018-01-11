@@ -34,7 +34,7 @@
         </navigator>
     </view>
 </view>
-<view wx:if="{{list.list.length==0 || list.list==null }}" class='no-data'>
+<view wx:if="{{list.list.length==0 && isShow==true }}" class='no-data'>
     <view class='icon-nothing'></view>
     暂无数据
 </view>

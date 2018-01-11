@@ -13,7 +13,7 @@
     </navigator>
 </view>
 </block>
-<view wx:if="{{list.length==0 || list.length==null}}" class='no-data'>
+<view wx:if="{{list.length==0 && isShow==true}}" class='no-data'>
     <view class='icon-nothing'></view>
     暂无资讯数据
 </view>
