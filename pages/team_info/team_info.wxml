@@ -106,10 +106,10 @@
 
     </view>
     <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">
-        <view class='select-mouth'>
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class='select-mouth'> 
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="{{'text'}}">
                 <view class="picker icon-rili">
-                    请选择月份：{{array[index]}} 月份
+                    请选择月份：{{monthText}}
                 </view>
             </picker>
         </view>
