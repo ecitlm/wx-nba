@@ -1,6 +1,6 @@
 const Promise = require('./bluebird'); //为了兼容问题
 const md5 = require('./md5');
-const appkey = 'wxnba201711';
+const appkey = '6fc18957ce391f84a7ce34ce13cd99c4';
 
 /**
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
