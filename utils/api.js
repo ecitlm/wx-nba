@@ -1,6 +1,6 @@
 const fetch = require("./fetch");
 //const API_DOMAIN = "https://api.it919.cn/index.php/api"; //接口请求地址
-const API_DOMAIN = "https://wxapp.it919.cn/?service="; //接口请求地址
+const API_DOMAIN = "http://wapapi.it919.cn/?service="; //接口请求地址
 /**
  * @param  {String} 接口地址   
  * @param  {Objece} params 接口参数参数
