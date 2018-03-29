@@ -1,6 +1,6 @@
 const Promise = require('./bluebird'); //为了兼容问题
-const md5 = require('./md5');
-const appkey = '6fc18957ce391f84a7ce34ce13cd99c4';
+const MD5 = require('./md5');
+const APPKEY = '6fc18957ce391f84a7ce34ce13cd99c4';
 
 /**
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
@@ -12,7 +12,7 @@ var getSign = (params) => {
             delete params[key];
         }
     }
-    params.appkey = appkey;
+    params.appkey = APPKEY;
     var keyArr = Object.keys(params).sort();
     var newObj = {};
     var Kstr = '';
@@ -21,7 +21,7 @@ var getSign = (params) => {
         Kstr += params[keyArr[i]];
     }
     delete params['appkey'];
-    return md5(Kstr);
+    return MD5(Kstr);
 };
 
 /**
@@ -33,17 +33,19 @@ var checkCode = (resolve, res) => {
     if (res.ret == 200) {
         resolve(res);
     } else if (res.ret == 400) { //确实必要字段
-        wx.showModal({
-            title: '',
-            showCancel: false,
-            content: res.msg,
+        wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000,
+            mask: true
         });
     } else if ((res.ret = 406)) { //签名错误
-        wx.showModal({
-            title: '',
-            showCancel: false,
-            content: res.msg,
-        });
+		wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000,
+            mask: true
+        })
     } else {}
 };
 
