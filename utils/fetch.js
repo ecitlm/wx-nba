@@ -6,17 +6,17 @@ const APPKEY = '6fc18957ce391f84a7ce34ce13cd99c4';
  * 将参数+签名的值按照字典排序得到签名sign 参数的值按照升序排列
  * @param {Object} params   参数集合    
  */
-var getSign = (params) => {
-    for (var key in params) {
+const getSign = (params) => {
+    for (let key in params) {
         if (!params[key]) {
             delete params[key];
         }
     }
-    params.appkey = APPKEY;
-    var keyArr = Object.keys(params).sort();
-    var newObj = {};
-    var Kstr = '';
-    for (var i in keyArr) {
+    params.appkey = appkey;
+    let keyArr = Object.keys(params).sort();
+    let newObj = {};
+    let Kstr = '';
+    for (let i in keyArr) {
         newObj[keyArr[i]] = params[keyArr[i]];
         Kstr += params[keyArr[i]];
     }
@@ -29,7 +29,7 @@ var getSign = (params) => {
  * @param {*} resolve 
  * @param {*} res 返回的data
  */
-var checkCode = (resolve, res) => {
+const checkCode = (resolve, res) => {
     if (res.ret == 200) {
         resolve(res);
     } else if (res.ret == 400) { //确实必要字段
