@@ -47,5 +47,10 @@
     "navigationBarBackgroundColor": "#00AA98",
     "navigationBarTitleText": "NBA看球",
     "navigationBarTextStyle": "#FFF"
-  }
+  },
+   "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
