@@ -12,7 +12,7 @@ const getSign = (params) => {
             delete params[key];
         }
     }
-    params.appkey = appkey;
+    params.appkey = APPKEY;
     let keyArr = Object.keys(params).sort();
     let newObj = {};
     let Kstr = '';

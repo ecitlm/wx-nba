@@ -1,10 +1,11 @@
-/**
- * WeChat API 模块
- * @type {Object}
- * 用于将微信官方`API`封装为`Promise`方式
- */
+
 const wechat = require('./utils/wechat.js')
 const api = require('./utils/api.js')
+
+wx.setEnableDebug({
+  enableDebug: true
+})
+
 App({
     /**
      * Global shared
