@@ -8,7 +8,7 @@ Page({
     data: {
         list: [],
         page: 0,
-        isShow: false, 
+        isShow: false,
     },
     /**
      * 生命周期函数--监听页面加载
