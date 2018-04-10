@@ -1,13 +1,13 @@
-const wechat = require('./utils/wechat.js')
-const api = require('./utils/api.js')
+const wechat = require("./utils/wechat.js");
+const api = require("./utils/api.js");
 
 wx.setEnableDebug({
   enableDebug: true
-})
+});
 
 App({
   data: {
-    version: '0.1.0'
+    version: "0.1.0"
   },
   wechat: wechat,
   api: api,
@@ -28,4 +28,4 @@ App({
    * 当小程序从前台进入后台，会触发 onHide
    */
   onHide() {}
-})
+});
