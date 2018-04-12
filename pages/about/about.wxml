@@ -1,22 +1,37 @@
 <view class='a-head'>
-    <view class='left'>
-        <view class='name'>{{item.name}}</view>
-        <view class='job'>{{item.job}}</view>
-    </view>
-    <view class='right'>
-        <image src='{{item.icon}}' bindtap='previewImage' data-url="{{item.icon}}"></image>
-    </view>
+  <view class='left'>
+    <view class='name'>{{item.name}}</view>
+    <view class='job'>{{item.job}}</view>
+  </view>
+  <view class=" {{isPlay?'right Rotation':'right'}}">
+    <image src='{{item.icon}}' bindtap='previewImage' data-url="{{item.icon}}"></image>
+  </view>
 </view>
 <view class='wrap '>
-    <view class='line'></view>
-    <view class='list-view icon-address' bindtap='openMap'>{{item.address}}</view>
-    <view class='list-view icon-mail'>{{item.mail}}</view>
-    <view class='list-view icon-github'>{{item.github}}</view>
-    <view class='list-view icon-blog'>{{item.blog}}</view>
+  <view class='line'></view>
+  <view class='list-view icon-address' bindtap='openMap'>{{item.address}}</view>
+  <view class='list-view icon-mail'>{{item.mail}}</view>
+  <view class='list-view icon-github'>{{item.github}}</view>
+  <view class='list-view icon-blog'>{{item.blog}}</view>
 </view>
 <view class='Motto'>
-    {{item.Motto}}
+  {{item.Motto}}
 </view>
-<view class='audio'>
-    <audio poster="{{item.music.poster}}" name="{{item.music.name}}" author="{{item.music.author}}" src="{{item.music.src}}" id="myAudio" controls loop></audio>
+<!-- <view class='audio'>
+  <audio poster="{{item.music.poster}}" name="{{item.music.name}}" author="{{item.music.author}}" src="{{item.music.src}}" id="myAudio" controls loop></audio>
+</view> -->
+
+<view class='music-audio'>
+  <view class='poster left ' bindtap='playMusic'>
+    <image src='{{item.music.poster}}'></image>
+    <view class="music-icon {{isPlay?'pause':'paly'}}"></view>
+  </view>
+  <view class='music-info left'>
+    <text class='music-title'>{{item.music.name}}</text>
+    <text class='right duration'>{{musicTime || "00:00"}}</text>
+  </view>
+  <view class='music-author left'>{{item.music.author}}</view>
+  <view class='progress left'>
+  <view class='currbar' style='width:{{playState.currentPosition*100 / playState.duration}}%'></view>
+  </view>
 </view>

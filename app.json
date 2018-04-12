@@ -38,13 +38,19 @@
                 "text": "数据统计",
                 "iconPath": "static/images/stats.png",
                 "selectedIconPath": "static/images/stats-active.png"
+            },
+            {
+              "pagePath": "pages/about/about",
+              "text": "关于我",
+              "iconPath": "static/images/about.png",
+              "selectedIconPath": "static/images/about-active.png"
             }
         ]
     },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#00AA98",
-        "navigationBarTitleText": "NBA看球",
+        "navigationBarTitleText": "NbA球赛",
         "navigationBarTextStyle": "#FFF"
     },
     "networkTimeout": {
