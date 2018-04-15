@@ -13,7 +13,7 @@
                 <text>场均差</text>
             </view>
             <view class='t-body'>
-                <view class='team-item' wx:for="{{list.west}}" wx:for-item="item">
+                <view class='team-item' wx:for="{{list.west}}" wx:for-item="item" wx:key="index1">
                     <navigator url="/pages/team_info/team_info?teamId={{item.teamId}}">
                         <text id="{{item.teamId}}">{{index+1}}.{{item.name}}</text>
                         <text>{{item.wins}}</text>
@@ -34,7 +34,7 @@
                 <text>场均差</text>
             </view>
             <view class='t-body'>
-                <view class='team-item' wx:for="{{list.east}}" wx:for-item="item">
+                <view class='team-item' wx:for="{{list.east}}" wx:for-item="item" wx:key="index2">
                     <navigator url="/pages/team_info/team_info?teamId={{item.teamId}}">
                         <text id="{{item.teamId}}">{{index+1}}.{{item.name}}</text>
                         <text>{{item.wins}}</text>

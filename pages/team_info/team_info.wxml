@@ -65,7 +65,7 @@
                     <text class='left'>场均得分 {{item.pointsPG}}</text>
                     <text class='right'>联盟排名 {{item.pointsConference}}</text>
                 </view>
-                <view class='data-rank-item' wx:for="{{item.pointsarr}}" wx:for-item="list">
+                <view class='data-rank-item' wx:for="{{item.pointsarr}}" wx:for-item="list" wx:key="index1">
                     <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
                         <text class='left'>{{index+1}}. {{list.playername}}</text>
                         <text class='right'>{{list.data}}</text>
@@ -80,7 +80,7 @@
                     <text class='left'>场均篮板 {{item.reboundsPG}}</text>
                     <text class='right'>联盟排名 {{item.reboundsConference}}</text>
                 </view>
-                <view class='data-rank-item' wx:for="{{item.reboundsarr}}" wx:for-item="list">
+                <view class='data-rank-item' wx:for="{{item.reboundsarr}}" wx:for-item="list" wx:key="index">
                     <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
                         <text class='left'>{{index+1}}. {{list.playername}}</text>
                         <text class='right'>{{list.data}}</text>
@@ -94,7 +94,7 @@
                     <text class='left'>场均助攻 {{item.assistsPG}}</text>
                     <text class='right'>联盟排名 {{item.assistsConference}}</text>
                 </view>
-                <view class='data-rank-item' wx:for="{{item.assistsarr}}" wx:for-item="list">
+                <view class='data-rank-item' wx:for="{{item.assistsarr}}" wx:for-item="list" wx:key="index2">
                     <navigator url="/pages/player_detail/player_detail?id={{list.playerid}}">
                         <text class='left'>{{index+1}}. {{list.playername}}</text>
                         <text class='right'>{{list.data}}</text>
@@ -106,8 +106,8 @@
 
     </view>
     <view class="swiper-item   {{currentTab==1 ? 'active' : ''}}">
-        <view class='select-mouth'> 
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="{{'text'}}">
+        <view class='select-mouth'>
+            <picker bindchange="bindPickerChange" value="{{index-1}}" range="{{array}}" range-key="{{'text'}}">
                 <view class="picker icon-rili">
                     请选择月份：{{monthText}}
                 </view>
@@ -115,7 +115,7 @@
         </view>
 
         <view wx:if="{{schedule.list}}">
-            <view class="live_item" wx:for="{{schedule.list}}" wx:for-item="list">
+            <view class="live_item" wx:for="{{schedule.list}}" wx:for-item="list" wx:key="index3">
                 <navigator url="/pages/live_detail/live_detail?liveid={{list.liveid}}&schid={{list.schid}}">
                     <view class="team">
                         <image src="{{list.visitteamlogo}}" class="team-logo"></image>
@@ -153,7 +153,7 @@
     </view>
     <view class="swiper-item   {{currentTab==2 ? 'active' : ''}}">
         <view class='list-player'>
-            <view class='item-player' wx:for="{{playerList}}" wx:for-item="list">
+            <view class='item-player' wx:for="{{playerList}}" wx:for-item="list" wx:key="index4">
                 <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
                     <image src='{{list.logo}}'></image>
                     <text>{{list.position}}</text>

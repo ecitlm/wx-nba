@@ -51,7 +51,8 @@
             <image wx:if="{{item.image_src}}" bindtap='previewImage' data-url="{{item.image_src}}" src='{{item.image_src}}' mode="widthFix"></image>
             <view class='img-msg' wx:if="{{item.match_data[0]}}">
               <text>{{item.match_data[0].title}}</text>
-              <image class='img-msg-image' bindtap='previewImage' data-url="{{item.match_data[0].pic}}" wx:if="{{item.match_data[0].pic}}" src='{{item.match_data[0].pic}}'></image>
+              <image class='img-msg-image' bindtap='previewImage' data-url="{{item.match_data[0].pic}}" wx:if="{{item.match_data[0].pic}}"
+                src='{{item.match_data[0].pic}}'></image>
             </view>
           </view>
         </view>
@@ -122,7 +123,7 @@
             </view>
             <view class='team-top-play-item'>
               <view wx:for="{{technical.topplayer.home}}" wx:for-item="list">
-                <text class='left'>{{list.value  || "=="}}</text>
+                <text class='left'>{{list.value || "=="}}</text>
                 <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
                   <text class='right'>{{list.name || "=="}}</text>
                 </navigator>
@@ -140,8 +141,8 @@
             <text> 得分</text>
             <text> 篮板</text>
             <text> 助攻</text>
-            <text>  投篮</text>
-            <text>  罚篮</text>
+            <text> 投篮</text>
+            <text> 罚篮</text>
             <text> 三分</text>
             <text> 失误</text>
             <text>时间</text>
@@ -172,8 +173,8 @@
             <text> 得分</text>
             <text> 篮板</text>
             <text> 助攻</text>
-            <text>  投篮</text>
-            <text>  罚篮</text>
+            <text> 投篮</text>
+            <text> 罚篮</text>
             <text> 三分</text>
             <text> 失误</text>
             <text>时间</text>

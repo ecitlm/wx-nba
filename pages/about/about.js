@@ -1,54 +1,52 @@
-var app = getApp();
+var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     item: [],
     isPlay: false,
-    playState:null,
-    currentPosition:0,
-    duration:0,
-    musicTime:'00:00',
-    timer:null
+    playState: null,
+    currentPosition: 0,
+    duration: 0,
+    musicTime: '00:00',
+    timer: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-    var that = this;
-    app.api.website({})
+  onLoad: function(options) {
+    var that = this
+    app.api
+      .website({})
       .then(res => {
-        console.log(res);
+        console.log(res)
         that.setData({
           item: res.data
-        });
+        })
       })
       .catch(e => {
         console.error(e)
-      });
-
+      })
   },
 
-  openMap: function () {
-    var that = this;
+  openMap: function() {
+    var that = this
     wx.getLocation({
       type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
-      success: function (res) {
+      success: function(res) {
         // success
         wx.openLocation({
-          latitude: 22.549990, // 纬度，范围为-90~90，负数表示南纬
-          longitude: 113.950660, // 经度，范围为-180~180，负数表示西经
-          scale: 28, // 缩放比例          
+          latitude: 22.54999, // 纬度，范围为-90~90，负数表示南纬
+          longitude: 113.95066, // 经度，范围为-180~180，负数表示西经
+          scale: 28 // 缩放比例
         })
       }
     })
   },
 
-  previewImage: function (e) {
+  previewImage: function(e) {
     var url = e.target.dataset.url
     wx.previewImage({
       current: url, // 当前显示图片的http链接
@@ -56,7 +54,6 @@ Page({
     })
   },
   playMusic() {
-
     clearInterval(this.data.timer)
     this.setData({
       timer: null
@@ -68,25 +65,25 @@ Page({
       wx.playBackgroundAudio({
         dataUrl: this.data.item.music.src,
         title: this.data.item.music.name,
-        coverImgUrl: this.data.item.music.poster,
+        coverImgUrl: this.data.item.music.poster
       })
       this.getTime()
     } else {
       wx.pauseBackgroundAudio()
     }
   },
-  getTime(){
-    let that=this
-    var timer = setInterval(function(){
+  getTime() {
+    let that = this
+    var timer = setInterval(function() {
       wx.getBackgroundAudioPlayerState({
-        success:  res=>{
+        success: res => {
           that.setData({
-            playState:res,
+            playState: res,
             musicTime: that.secondToDate(res.duration)
           })
         }
       })
-    }, 500); 
+    }, 300)
 
     this.setData({
       timer: timer
@@ -94,31 +91,30 @@ Page({
   },
 
   secondToDate(result) {
-    var m = Math.floor((result / 60 % 60));
-    var s = Math.floor((result % 60));
-    if(s<10){
-      s='0'+s
+    var m = Math.floor((result / 60) % 60)
+    var s = Math.floor(result % 60)
+    if (s < 10) {
+      s = '0' + s
     }
-    return result = m + ":" + s;
+    return (result = m + ':' + s)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-    wx.onBackgroundAudioPlay(function(){
+  onReady: function() {
+    wx.onBackgroundAudioPlay(function() {
       console.log(1)
-    }) 
+    })
 
-    wx.onBackgroundAudioStop(res=>{
-        this.setData({
-          isPlay: false
-        })
-        clearInterval(this.data.timer)
-        this.setData({
-          timer: null
-        })
+    wx.onBackgroundAudioStop(res => {
+      this.setData({
+        isPlay: false
+      })
+      clearInterval(this.data.timer)
+      this.setData({
+        timer: null
+      })
     })
 
     wx.onBackgroundAudioPause(res => {
@@ -130,48 +126,35 @@ Page({
         timer: null
       })
     })
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function() {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function() {}
 })

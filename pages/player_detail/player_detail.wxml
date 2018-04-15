@@ -7,8 +7,8 @@
         <view class='player-name'>
             <text class='p-name'>{{list.cnname}}</text>
             <text class='player-place'>
-{{list.position}}({{list.number}})/ {{list.teamname}}
-</text>
+                {{list.position}}({{list.number}})/ {{list.teamname}}
+            </text>
         </view>
     </view>
 

@@ -32,6 +32,6 @@
   </view>
   <view class='music-author left'>{{item.music.author}}</view>
   <view class='progress left'>
-  <view class='currbar' style='width:{{playState.currentPosition*100 / playState.duration}}%'></view>
+    <view class='currbar' style='width:{{playState.currentPosition*100 / playState.duration}}%'></view>
   </view>
 </view>

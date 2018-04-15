@@ -21,9 +21,9 @@
     </view>
     <view class='foot-item'>
       <navigator url="/pages/stats/stats">
-      <view class='icon icon-about'></view>
-      统计
-       </navigator>
+        <view class='icon icon-about'></view>
+        统计
+      </navigator>
     </view>
 
   </view>

@@ -1,20 +1,21 @@
 <block wx:if="{{list.length !=0}}">
-<view class="news-list" wx:for="{{list}}" wx:for-item="list">
-    <navigator url="/pages/news_info/news_info?docid={{list.docid}}">
-        <view class='list-img left'>
-            <image src='{{list.imgsrc}}'></image>
-        </view>
-        <view class='news-info'>
-            <view class='title'>{{list.title}}</view>
-            <view class='time-info'>
-                <view class='date'>{{list.ptime}} <text class='comment-coount right'>{{list.commentCount}}</text> </view>
+    <view class="news-list" wx:for="{{list}}" wx:for-item="list" wx:key="index">
+        <navigator url="/pages/news_info/news_info?docid={{list.docid}}">
+            <view class='list-img left'>
+                <image src='{{list.imgsrc}}'></image>
             </view>
-        </view>
-    </navigator>
-</view>
+            <view class='news-info'>
+                <view class='title'>{{list.title}}</view>
+                <view class='time-info'>
+                    <view class='date'>{{list.ptime}}
+                        <text class='comment-coount right'>{{list.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
 </block>
 <view wx:if="{{list.length==0 && isShow==true}}" class='no-data'>
     <view class='icon-nothing'></view>
     暂无资讯数据
 </view>
-

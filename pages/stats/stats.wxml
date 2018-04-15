@@ -18,7 +18,7 @@
       <text>总{{name}}</text>
     </view>
     <view class='tbody'>
-      <navigator wx:for="{{stats.record}}" wx:for-item="item" url="/pages/player_detail/player_detail?id={{item.playerid}}" class="{{index%2 == 0 ? 'red' : 'f5f5f5'}}">
+      <navigator wx:for="{{stats.record}}" wx:for-item="item" wx:key="index" url="/pages/player_detail/player_detail?id={{item.playerid}}" class="{{index%2 == 0 ? 'red' : 'f5f5f5'}}">
         <text>{{index+1}}.{{item.playername}}</text>
         <text>{{item.avgdata}}</text>
         <text>{{item.totaldata}}</text>
