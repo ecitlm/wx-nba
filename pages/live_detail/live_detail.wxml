@@ -38,7 +38,7 @@
   <view current="{{currentTab}}" class="swiper-box" bindchange="bindChange">
     <view class="swiper-item padding-lr-30  {{currentTab==0 ? 'active' : ''}}">
       <view class='live-content'>
-        <view class='live-content-item' wx:for="{{content}}" wx:for-item="item">
+        <view class='live-content-item' wx:for="{{content}}" wx:for-item="item" wx:key="key1">
           <view class='liveroom_cuser'>
             <image class='user-img' src='{{item.speaker_data.icon}}'></image>
             <text class='live-user left'>{{item.speaker}}</text>
@@ -83,7 +83,7 @@
             </view>
           </view>
           <view class='sec_scores'>
-            <view wx:for="{{list.sec_scores}}" wx:for-item="list" class="one-quarter">
+            <view wx:for="{{list.sec_scores}}" wx:for-item="list" class="one-quarter" wx:key="key2">
               <text>{{ list.score1 || "0"}}</text>
               <text>{{list.score2 || "0"}}</text>
             </view>
@@ -103,7 +103,7 @@
           <view class='padding-lr-30' wx-if="{{technical.topplayer}}">
             <!--数据  -->
             <view class='team-top-play-item'>
-              <view wx:for="{{technical.topplayer.visit}}" wx:for-item="list">
+              <view wx:for="{{technical.topplayer.visit}}" wx:for-item="list" wx:key="index2">
                 <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
                   <text class='left'>{{list.name || "=="}}</text>
                 </navigator>
@@ -122,7 +122,7 @@
               <view>失误</view>
             </view>
             <view class='team-top-play-item'>
-              <view wx:for="{{technical.topplayer.home}}" wx:for-item="list">
+              <view wx:for="{{technical.topplayer.home}}" wx:for-item="list" wx:key="index1">
                 <text class='left'>{{list.value || "=="}}</text>
                 <navigator url="/pages/player_detail/player_detail?id={{list.id}}">
                   <text class='right'>{{list.name || "=="}}</text>
@@ -147,7 +147,7 @@
             <text> 失误</text>
             <text>时间</text>
           </view>
-          <view wx:for="{{technical.playStat.visit}}" wx:for-item="list">
+          <view wx:for="{{technical.playStat.visit}}" wx:for-item="list" wx:key="key3">
             <view wx:if="{{list}}" wx:for-index="index" class="player-data-item {{index%2 == 0 ? 'red' : 'f5f5f5'}}">
               <navigator url="/pages/player_detail/player_detail?id={{list[0]}}">
                 <text>{{list[1]}}</text>
@@ -181,7 +181,7 @@
 
 
           </view>
-          <view wx:for="{{technical.playStat.home}}" wx:for-item="list">
+          <view wx:for="{{technical.playStat.home}}" wx:for-item="list" wx:key="key4">
             <view wx:if="{{list}}" wx:for-index="index" class="player-data-item {{index%2 == 0 ? 'red' : 'f5f5f5'}}">
               <navigator url="/pages/player_detail/player_detail?id={{list[0]}}">
                 <text>{{list[1]}}</text>

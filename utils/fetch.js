@@ -39,7 +39,6 @@ const checkCode = (resolve, res) => {
       duration: 2000,
       mask: true
     })
-    return
   } else if (+res.ret === 406) {
     wx.showToast({
       title: res.msg,
@@ -47,7 +46,6 @@ const checkCode = (resolve, res) => {
       duration: 2000,
       mask: true
     })
-    return
   } else {
   }
 }
@@ -59,23 +57,26 @@ const checkCode = (resolve, res) => {
  * @param  {Object} params 参数
  * @return {Promise}       包含抓取任务的Promise
  */
-module.exports = function(api, path, params) {
+module.exports = function (api, path, params) {
   wx.showLoading({
     title: '加载中'
   })
+  console.log(`${api}${path}`)
   params.timestamp = new Date().valueOf()
   console.log(params)
+  params.sign = ''
   params.sign = getSign(params)
   return new Promise((resolve, reject) => {
     wx.request({
       url: `${api}${path}`,
       data: Object.assign({}, params),
       header: { 'Content-Type': 'json' },
-      success: function(res) {
+      success: function (res) {
+        console.log(res)
         checkCode(resolve, res.data)
         wx.hideLoading()
       },
-      fail: function(err) {
+      fail: function (err) {
         wx.hideLoading()
         reject(err)
       }

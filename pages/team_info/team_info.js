@@ -1,5 +1,5 @@
 var app = getApp()
-var month = new Date().getMonth() + 1 //获取当前月份当角标、0开始;
+var month = new Date().getMonth() + 1 // 获取当前月份当角标、0开始;
 Page({
   /**
    * 页面的初始数据
@@ -67,7 +67,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(e) {
+  onLoad: function (e) {
     this.team_info(e.teamId)
     this.Lineup(e.teamId)
     this.setData({
@@ -78,7 +78,7 @@ Page({
     this.team_schedule(this.data.index)
   },
 
-  team_info: function(teamId) {
+  team_info: function (teamId) {
     var that = this
     var params = {
       teamId: teamId
@@ -90,16 +90,16 @@ Page({
         that.setData({
           item: res.data
         })
-        //设置title
+        // 设置title
         wx.setNavigationBarTitle({
-          title: res.data.cnname //页面标题为路由参数
+          title: res.data.cnname // 页面标题为路由参数
         })
       })
       .catch(e => {
         console.error(e)
       })
   },
-  Lineup: function(teamId) {
+  Lineup: function (teamId) {
     var that = this
     var params = {
       teamId: teamId
@@ -116,7 +116,7 @@ Page({
         console.error(e)
       })
   },
-  team_schedule: function(mouth) {
+  team_schedule: function (mouth) {
     var that = this
     var params = {
       teamId: parseInt(this.data.teamId),
@@ -135,12 +135,12 @@ Page({
   },
 
   // 滑动切换tab
-  bindChange: function(e) {
+  bindChange: function (e) {
     var that = this
     that.setData({ currentTab: e.detail.current })
   },
   // 点击tab切换
-  swichNav: function(e) {
+  swichNav: function (e) {
     var that = this
     if (this.data.currentTab === e.target.dataset.current) {
       return false
@@ -150,8 +150,8 @@ Page({
       })
     }
   },
-  //月份赛程选择
-  bindPickerChange: function(e) {
+  // 月份赛程选择
+  bindPickerChange: function (e) {
     this.setData({
       index: this.data.array[e.detail.value]['value'],
       monthText: this.data.array[e.detail.value]['text']
@@ -162,35 +162,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {},
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {},
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {},
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {},
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {},
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {},
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {}
+  onShareAppMessage: function () {}
 })

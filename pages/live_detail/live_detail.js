@@ -7,9 +7,9 @@ Page({
     currentTab: 0, // tab切换
     technical: []
   },
-  onLoad: function(e) {
-    this.live_content(e.schid) //获取直播内容
-    this.live_detail(e.schid, e.liveid) //获取直播室详情信息
+  onLoad: function (e) {
+    this.live_content(e.schid) // 获取直播内容
+    this.live_detail(e.schid, e.liveid) // 获取直播室详情信息
     this.technical_statistics(e.schid)
     this.setData({
       schid: e.schid,
@@ -17,8 +17,8 @@ Page({
     })
   },
 
-  //获取直播内容数据
-  live_content: function(schid) {
+  // 获取直播内容数据
+  live_content: function (schid) {
     var that = this
     var params = {
       schid: schid
@@ -35,8 +35,8 @@ Page({
         console.error(e)
       })
   },
-  //获取比赛详情信息
-  live_detail: function(schid, liveid) {
+  // 获取比赛详情信息
+  live_detail: function (schid, liveid) {
     var that = this
     var params = {
       schid: schid,
@@ -49,15 +49,15 @@ Page({
           list: res.data
         })
         wx.setNavigationBarTitle({
-          title: res.data.t1_name + ' VS ' + res.data.t2_name //页面标题为路由参数
+          title: res.data.t1_name + ' VS ' + res.data.t2_name // 页面标题为路由参数
         })
       })
       .catch(e => {
         console.error(e)
       })
   },
-  //获取球员技术统计
-  technical_statistics: function(schid) {
+  // 获取球员技术统计
+  technical_statistics: function (schid) {
     var that = this
     var params = {
       schid: schid
@@ -74,7 +74,7 @@ Page({
       })
   },
 
-  previewImage: function(e) {
+  previewImage: function (e) {
     var url = e.target.dataset.url
     console.log(e.target)
     wx.previewImage({
@@ -84,15 +84,15 @@ Page({
   },
 
   // 滑动切换tab
-  bindChange: function(e) {
+  bindChange: function (e) {
     var that = this
     that.setData({ currentTab: e.detail.current })
   },
   // 点击tab切换
-  swichNav: function(e) {
+  swichNav: function (e) {
     var that = this
     this.technical_statistics(that.data.schid)
-    if (e.target.dataset.current == 0) {
+    if (e.target.dataset.current === 0) {
       that.live_content(that.data.schid)
     }
     if (this.data.currentTab === e.target.dataset.current) {
@@ -103,16 +103,16 @@ Page({
       })
     }
   },
-  loadMore: function(e) {
+  loadMore: function (e) {
     console.log(1)
   },
-  upper: function(e) {
-    //console.log(e)
-  },
-  lower: function(e) {
+  upper: function (e) {
     // console.log(e)
   },
-  scroll: function(e) {
+  lower: function (e) {
+    // console.log(e)
+  },
+  scroll: function (e) {
     // console.log(e)
   }
 })

@@ -10,7 +10,7 @@
 </view>
 <view class='comment-wrap' wx:if="{{comments.length !=0}}">
     <view class='title'>评论</view>
-    <view class='comment-item' wx:for="{{comments}}" wx:for-item="comments">
+    <view class='comment-item' wx:for="{{comments}}" wx:for-item="comments" wx:key="key">
         <view class='left'>
             <image src='{{comments.user.avatar}}'></image>
         </view>

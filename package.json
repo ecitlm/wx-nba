@@ -1,0 +1,19 @@
+{
+  "name": "wx-nba",
+  "version": "1.0.0",
+  "description": "wechat app for nba",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.coding.net/ecit/wx-nba.git"
+  },
+  "author": "ecitlm",
+  "license": "ISC",
+  "standard": {
+    "ignore": ["**/out/", "/utils/bluebird.js", "/utils/md5.js"],
+    "globals": ["Page", "wx", "getApp", "App"]
+  }
+}
