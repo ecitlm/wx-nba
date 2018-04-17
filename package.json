@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.coding.net/ecit/wx-nba.git"
+    "url": "https://github.com/ecitlm/wx-nba.git"
   },
   "author": "ecitlm",
   "license": "ISC",
   "standard": {
-    "ignore": ["**/out/", "/utils/bluebird.js", "/utils/md5.js"],
+    "ignore": ["/utils/bluebird.js", "/utils/md5.js"],
     "globals": ["Page", "wx", "getApp", "App"]
   }
 }
