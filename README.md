@@ -50,17 +50,14 @@ https://github.com/ecitlm/wx-nba-api.git
 ## 小程序 UI 界面截图
 
 > 界面整体有十几个、包含以上接口对应的 UI 界面、以下界面属于应用的截图界面
->
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/d4d8e33f8bb69d74a618f57bbb3f07d8)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/1e78f1707b1518d311f8630a8dbac160)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/12646461f61d7f8e9f938f1b998d24cc)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/45db5be8620ced658e35a4adc4bd65c3)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/d264a8aafcccc8266d9d55f2a1fb54aa)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/0ff0aea2847dc1b0a41ce0d22341ff36)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/703963b267cbb71871a4ee936dc47a75)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/2fe5707340136c88a82c0f17b032e0b8)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/455fceb7966e6aed5b6b85638da18fab)
-> ![preview](https://user-gold-cdn.xitu.io/2017/11/3/07a43e2416a473d3312409add56588a4)
+
+![preview](http://cdn.it919.cn/1.jpg)![preview](http://cdn.it919.cn/2.jpg)
+![preview](http://cdn.it919.cn/3.jpg)![preview](http://cdn.it919.cn/4.jpg)
+![preview](http://cdn.it919.cn/5.jpg)![preview](http://cdn.it919.cn/6.jpg)
+![preview](http://cdn.it919.cn/7.jpg)![preview](http://cdn.it919.cn/8.jpg)
+![preview](http://cdn.it919.cn/9.jpg)![preview](http://cdn.it919.cn/10.jpg)
+![preview](http://cdn.it919.cn/11.jpg)![preview](http://cdn.it919.cn/12.jpg)
+![preview](http://cdn.it919.cn/13.jpg)
 
 ### 关于接口签名 sign 生成问题
 
