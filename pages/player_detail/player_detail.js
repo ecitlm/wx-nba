@@ -11,7 +11,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
-    var that = this
     var params = {
       playerid: e.id || '5292'
     }
@@ -19,7 +18,7 @@ Page({
       .player_detail(params)
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           list: res.data
         })
       })

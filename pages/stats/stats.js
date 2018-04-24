@@ -14,11 +14,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
     app.api
       .player_top({})
       .then(res => {
-        that.setData({
+        this.setData({
           item: res.data,
           stats: res.data.pt
         })
@@ -29,9 +28,8 @@ Page({
   },
   // 点击tab切换
   tabNav: function (e) {
-    var that = this
-    that.setData({
-      stats: that.data.item[e.target.dataset.t],
+    this.setData({
+      stats: this.data.item[e.target.dataset.t],
       current: e.target.dataset.t,
       name: e.target.dataset.name
     })

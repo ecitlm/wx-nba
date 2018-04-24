@@ -22,12 +22,11 @@ Page({
   onReady: function () {},
 
   team_rank: function () {
-    var that = this
     app.api
       .team_rank({})
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           list: res.data
         })
       })
@@ -47,16 +46,14 @@ Page({
   onHide: function () {},
   // 滑动切换tab
   bindChange: function (e) {
-    var that = this
-    that.setData({ currentTab: e.detail.current })
+    this.setData({ currentTab: e.detail.current })
   },
   // 点击tab切换
   swichNav: function (e) {
-    var that = this
     if (this.data.currentTab === e.target.dataset.current) {
       return false
     } else {
-      that.setData({
+      this.setData({
         currentTab: e.target.dataset.current
       })
     }

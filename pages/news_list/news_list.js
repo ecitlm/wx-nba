@@ -16,16 +16,15 @@ Page({
     this.news_list(0)
   },
   news_list: function (page) {
-    var that = this
     var data = {
       page: page
     }
     app.api
       .news_list(data)
       .then(res => {
-        that.setData({
+        this.setData({
           isShow: true,
-          list: that.data.list.concat(res.data)
+          list: this.data.list.concat(res.data)
         })
       })
       .catch(e => {

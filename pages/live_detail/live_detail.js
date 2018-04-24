@@ -19,7 +19,6 @@ Page({
 
   // 获取直播内容数据
   live_content: function (schid) {
-    var that = this
     var params = {
       schid: schid
     }
@@ -27,7 +26,7 @@ Page({
       .live_content(params)
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           content: res.data
         })
       })
@@ -37,7 +36,6 @@ Page({
   },
   // 获取比赛详情信息
   live_detail: function (schid, liveid) {
-    var that = this
     var params = {
       schid: schid,
       liveid: liveid
@@ -45,7 +43,7 @@ Page({
     app.api
       .live_detail(params)
       .then(res => {
-        that.setData({
+        this.setData({
           list: res.data
         })
         wx.setNavigationBarTitle({
@@ -58,14 +56,13 @@ Page({
   },
   // 获取球员技术统计
   technical_statistics: function (schid) {
-    var that = this
     var params = {
       schid: schid
     }
     app.api
       .technical_statistics(params)
       .then(res => {
-        that.setData({
+        this.setData({
           technical: res.data
         })
       })
@@ -85,20 +82,18 @@ Page({
 
   // 滑动切换tab
   bindChange: function (e) {
-    var that = this
-    that.setData({ currentTab: e.detail.current })
+    this.setData({ currentTab: e.detail.current })
   },
   // 点击tab切换
   swichNav: function (e) {
-    var that = this
-    this.technical_statistics(that.data.schid)
+    this.technical_statistics(this.data.schid)
     if (e.target.dataset.current === 0) {
-      that.live_content(that.data.schid)
+      this.live_content(this.data.schid)
     }
     if (this.data.currentTab === e.target.dataset.current) {
       return false
     } else {
-      that.setData({
+      this.setData({
         currentTab: e.target.dataset.current
       })
     }

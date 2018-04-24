@@ -9,7 +9,6 @@ Page({
   },
   // ajax 列表请求
   nab_schedule: function(param) {
-    var that = this
     var params = {
       date: param
     }
@@ -18,7 +17,7 @@ Page({
       .then(res => {
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
-        that.setData({
+        this.setData({
           isShow: true,
           list: res.data.data
         })

@@ -79,7 +79,6 @@ Page({
   },
 
   team_info: function (teamId) {
-    var that = this
     var params = {
       teamId: teamId
     }
@@ -87,7 +86,7 @@ Page({
       .team_info(params)
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           item: res.data
         })
         // 设置title
@@ -100,7 +99,6 @@ Page({
       })
   },
   Lineup: function (teamId) {
-    var that = this
     var params = {
       teamId: teamId
     }
@@ -108,7 +106,7 @@ Page({
       .Lineup(params)
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           playerList: res.data
         })
       })
@@ -117,7 +115,6 @@ Page({
       })
   },
   team_schedule: function (mouth) {
-    var that = this
     var params = {
       teamId: parseInt(this.data.teamId),
       mouth: mouth
@@ -125,7 +122,7 @@ Page({
     app.api
       .team_schedule(params)
       .then(res => {
-        that.setData({
+        this.setData({
           schedule: res.data
         })
       })
@@ -136,16 +133,14 @@ Page({
 
   // 滑动切换tab
   bindChange: function (e) {
-    var that = this
-    that.setData({ currentTab: e.detail.current })
+    this.setData({ currentTab: e.detail.current })
   },
   // 点击tab切换
   swichNav: function (e) {
-    var that = this
     if (this.data.currentTab === e.target.dataset.current) {
       return false
     } else {
-      that.setData({
+      this.setData({
         currentTab: e.target.dataset.current
       })
     }

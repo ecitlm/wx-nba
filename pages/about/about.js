@@ -17,12 +17,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
     app.api
       .website({})
       .then(res => {
         console.log(res)
-        that.setData({
+        this.setData({
           item: res.data
         })
       })
@@ -71,13 +70,12 @@ Page({
     }
   },
   getTime () {
-    let that = this
     var timer = setInterval(function () {
       wx.getBackgroundAudioPlayerState({
         success: res => {
-          that.setData({
+          this.setData({
             playState: res,
-            musicTime: that.secondToDate(res.duration)
+            musicTime: this.secondToDate(res.duration)
           })
         }
       })
