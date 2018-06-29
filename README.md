@@ -7,7 +7,7 @@ NBA 赛事直播、使用小程序实现的一个 NBA 球赛直播新闻小程�
 
 ```
 git clone https://github.com/ecitlm/wx-nba.git
-//将clone的项目文件包导入 微信web开发者工具 设置自己注册的appid、即可运行
+//将clone的项目文件中app文件夹包导入 微信web开发者工具 设置自己注册的appid、即可运行
 ```
 
 ## 已完成功能模块

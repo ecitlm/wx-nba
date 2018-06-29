@@ -15,7 +15,7 @@
   "standard": {
     "ignore": [
       "/app/utils/bluebird.js",
-       "/app/pages/wxParse",
+      "/app/pages/wxParse",
       "/app/utils/md5.js"
     ],
     "globals": [
@@ -26,11 +26,14 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.0.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
