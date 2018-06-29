@@ -1,0 +1,6 @@
+/build/
+/config/
+/dist/
+/app/utils/md5.js
+/app/utils/bluebird.js
+/app/pages/wxParse/

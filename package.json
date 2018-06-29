@@ -13,7 +13,24 @@
   "author": "ecitlm",
   "license": "ISC",
   "standard": {
-    "ignore": ["/utils/bluebird.js", "/utils/md5.js"],
-    "globals": ["Page", "wx", "getApp", "App"]
+    "ignore": [
+      "/app/utils/bluebird.js",
+       "/app/pages/wxParse",
+      "/app/utils/md5.js"
+    ],
+    "globals": [
+      "Page",
+      "wx",
+      "getApp",
+      "App"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
   }
 }

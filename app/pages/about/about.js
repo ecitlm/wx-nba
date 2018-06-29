@@ -70,7 +70,7 @@ Page({
     }
   },
   getTime () {
-    var timer = setInterval(()=> {
+    var timer = setInterval(() => {
       wx.getBackgroundAudioPlayerState({
         success: res => {
           this.setData({
