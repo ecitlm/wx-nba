@@ -1,5 +1,5 @@
 const wechat = require('./utils/wechat.js')
-const api = require('./utils/api.js')
+const api = require('./api/api.js')
 
 // wx.setEnableDebug({
 //   enableDebug: true

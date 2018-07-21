@@ -50,7 +50,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#00AA98",
-        "navigationBarTitleText": "NbA球赛",
+        "navigationBarTitleText": "NBA球赛",
         "navigationBarTextStyle": "#FFF"
     },
     "networkTimeout": {

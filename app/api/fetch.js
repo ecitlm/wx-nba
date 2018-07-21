@@ -1,5 +1,5 @@
-import { Promise } from './bluebird'
-import MD5 from './md5'
+import { Promise } from '../lib/bluebird'
+import MD5 from '../lib/md5'
 const APPKEY = '6fc18957ce391f84a7ce34ce13cd99c4'
 
 /**
