@@ -30,8 +30,8 @@ text {
 }
 
 .player-data {
-    border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
+    border-top: 1rpx solid #bebebe;
+    border-bottom: 1rpx solid #bebebe;
     height: 100rpx;
     float: left;
     width: 100%;
@@ -41,7 +41,7 @@ text {
 .player-data view {
     width: 25%;
     float: left;
-    border-right: 1px solid #e3e3e3;
+    border-right: 1rpx solid #bebebe;
     box-sizing: border-box;
     text-align: center;
     line-height: 40rpx;
@@ -70,7 +70,7 @@ text {
     font-size: 28rpx;
     padding: 10rpx 20rpx;
     box-sizing: border-box;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1rpx solid #bebebe
 }
 
 .base-info-item-title {
@@ -86,8 +86,8 @@ text {
     float: left;
     text-align: center;
     font-size: 28rpx;
-    border-bottom: 1px solid #e3e3e3;
-    border-right: 1px solid #e3e3e3;
+    border-bottom: 1rpx solid #bebebe;
+    border-right: 1rpx solid #bebebe;
     box-sizing: border-box;
     padding: 20rpx 0
 }

@@ -101,7 +101,7 @@ text {
 
 .swiper-tab {
   width: 100%;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
   text-align: center;
   line-height: 80rpx;
 }
@@ -254,7 +254,7 @@ view.active {
   height: 60rpx;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
   float: left;
 }
 
@@ -273,7 +273,7 @@ view.active {
   width: 100%;
   display: block;
   height: 60rpx;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
 }
 
 .total-score {
@@ -286,7 +286,7 @@ view.active {
   width: 100%;
   display: block;
   height: 60rpx;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
 }
 
 .top-player {
@@ -341,7 +341,7 @@ view.active {
 
 .data-title view {
   display: block;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
   height: 80rpx;
   line-height: 80rpx;
 }
@@ -352,7 +352,7 @@ view.active {
   font-size: 28rpx;
   height: 80rpx;
   line-height: 80rpx;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
   overflow: hidden;
 }
 

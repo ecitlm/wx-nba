@@ -55,5 +55,6 @@ Page({
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading()
     this.nab_schedule()
-  }
+  },
+  onShareAppMessage: function () { }
 })

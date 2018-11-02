@@ -109,5 +109,6 @@ Page({
   },
   scroll: function (e) {
     // console.log(e)
-  }
+  },
+  onShareAppMessage: function () { }
 })

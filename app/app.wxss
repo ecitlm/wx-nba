@@ -39,7 +39,7 @@
 }
 
 .icon-nothing {
-    background: url(https://coding.it919.cn/static/images/no-data.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/no-data.png) center no-repeat;
     width: 120rpx;
     height: 120rpx;
     margin: 0 auto;
@@ -68,27 +68,27 @@
 }
 
 .icon-ball {
-    background: url(https://coding.it919.cn/static/images/ball.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/ball.png) center no-repeat;
 }
 
 .active .icon-ball-active {
-    background: url(https://coding.it919.cn/static/images/ball-active.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/ball-active.png) center no-repeat;
 }
 
 .icon-news {
-    background: url(https://coding.it919.cn/static/images/news.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/news.png) center no-repeat;
 }
 
 .active .icon-news-active {
-    background: url(https://coding.it919.cn/static/images/news-active.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/news-active.png) center no-repeat;
 }
 
 .icon-rank {
-    background: url(https://coding.it919.cn/static/images/rank.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/rank.png) center no-repeat;
 }
 
 .active .icon-rank-active {
-    background: url(https://coding.it919.cn/static/images/rank-active.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/rank-active.png) center no-repeat;
 }
 
 .footer .active {
@@ -96,7 +96,7 @@
 }
 
 .icon-about {
-    background: url(https://coding.it919.cn/static/images/about.png) center no-repeat;
+    background: url(https://wapapi.it919.cn/static/images/about.png) center no-repeat;
 }
 
 .footer .icon {

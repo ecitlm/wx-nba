@@ -12,7 +12,7 @@ view {
 .article .title {
     font-size: 36rpx;
     display: block;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1rpx solid #bebebe;
     padding-bottom: 8px;
     margin-bottom: 8px;
     font-weight: 700
@@ -49,7 +49,7 @@ view {
     box-sizing: border-box;
     width: 100%;
     padding: 15rpx 30rpx;
-    border-bottom: 1rpx solid #e3e3e3;
+    border-bottom: 1rpx solid #bebebe;
     float: left
 }
 
@@ -61,7 +61,7 @@ view {
     width: 60rpx;
     height: 60rpx;
     border-radius: 50%;
-    border: 1rpx solid #e3e3e3
+    border: 1rpx solid #bebebe
 }
 
 .comment-item .right {

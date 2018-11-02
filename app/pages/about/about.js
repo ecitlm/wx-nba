@@ -35,8 +35,8 @@ Page({
       type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
       success: res => {
         wx.openLocation({
-          latitude: 22.54999, // 纬度，范围为-90~90，负数表示南纬
-          longitude: 113.95066, // 经度，范围为-180~180，负数表示西经
+          latitude: 22.5340920000, // 纬度，范围为-90~90，负数表示南纬
+          longitude: 113.9548570000, // 经度，范围为-180~180，负数表示西经
           scale: 28 // 缩放比例
         })
       }

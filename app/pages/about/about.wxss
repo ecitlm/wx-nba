@@ -43,7 +43,7 @@ view {
 
 .line {
   width: 100%;
-  border-top: 1rpx solid #e3e3e3;
+  border-top: 1rpx solid #bebebe;
 }
 
 .list-view {
@@ -52,7 +52,7 @@ view {
   float: left;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px -1px 1px -1px #e3e3e3;
+  border-bottom:1rpx solid #bebebe;
   color: #555;
 }
 
@@ -112,7 +112,7 @@ view {
   bottom: 0;
   left: 0;
   background: #fcfcfc;
-  border-top: 1rpx solid #e3e3e3;
+  border-top: 1rpx solid #bebebe;
 }
 
 .poster,
@@ -186,7 +186,6 @@ view {
 .progress {
   width: 610rpx;
   height: 4rpx;
-  background: #e3e3e3;
   position: absolute;
   bottom: 0;
   right: 0;

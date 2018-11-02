@@ -6,7 +6,7 @@
   color: #fff;
   font-size: 28rpx;
   height: 300rpx;
-  background: url('https://coding.it919.cn/static/images/bg.png') center
+  background: url('https://wapapi.it919.cn/static/images/bg.png') center
     no-repeat;
   background-size: cover;
 }
@@ -33,7 +33,7 @@
 
 .swiper-tab {
   width: 100%;
-  border-bottom: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
   text-align: center;
   line-height: 80rpx;
 }
@@ -85,17 +85,17 @@ view.active {
 }
 
 .honor-item .rank {
-  background: url(https://coding.it919.cn/static/images/ranks.png) center
+  background: url(https://wapapi.it919.cn/static/images/ranks.png) center
     no-repeat;
 }
 
 .honor-item .no1 {
-  background: url(https://coding.it919.cn/static/images/no1.png) center
+  background: url(https://wapapi.it919.cn/static/images/no1.png) center
     no-repeat;
 }
 
 .honor-item .master {
-  background: url(https://coding.it919.cn/static/images/master.png) center
+  background: url(https://wapapi.it919.cn/static/images/master.png) center
     no-repeat;
 }
 
@@ -109,14 +109,15 @@ view.active {
   width: 100%;
   height: 200rpx;
   float: left;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1rpx solid #bebebe;
 }
 
 .skin-statsTech .t-head {
   background: #f5f5f5;
   height: 70rpx;
   line-height: 70rpx;
-  box-shadow: inset 0px -1px 1px -1px #ddd;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd
 }
 
 .skin-statsTech .t-head text,
@@ -126,7 +127,7 @@ view.active {
   width: 20%;
   text-align: center;
   float: left;
-  box-shadow: inset 0px -1px 1px -1px #ddd;
+  box-shadow: inset 0px -1rpx 1px -1rpx #bebebe;
 }
 
 .skin-statsTech .t-body {
@@ -154,7 +155,7 @@ view.active {
   float: left;
   box-sizing: border-box;
   padding: 0 30rpx;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1rpx solid #bebebe;
 }
 
 .data-rank-item {
@@ -163,7 +164,7 @@ view.active {
   box-sizing: border-box;
   padding: 0 30rpx;
   line-height: 70rpx;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1rpx solid #bebebe;
   float: left;
 }
 
@@ -209,7 +210,7 @@ view.active {
 .select-mouth {
   padding: 30rpx;
   font-size: 28rpx;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1rpx solid #bebebe;
 }
 
 /***************************赛程*******************  */
@@ -222,7 +223,7 @@ view.active {
   box-sizing: border-box;
   padding: 30rpx 10px;
   margin-top: 10px;
-  box-shadow: inset 0px -1px 1px -1px #999;
+  box-shadow: inset 0px -1px 1px -1px #bebebe;
 }
 
 .team {
