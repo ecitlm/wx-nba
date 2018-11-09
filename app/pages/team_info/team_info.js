@@ -61,6 +61,7 @@ Page({
     teamId: 24,
     schedule: [],
     playerList: [],
+    isLoad:false,
     currentTab: 0 // tab切换
   },
 
@@ -87,7 +88,14 @@ Page({
       .then(res => {
         console.log(res)
         this.setData({
-          item: res.data
+          item: res.data,
+          isLoad:true
+        })
+        // item.color
+        console.log(res.data.color)
+        wx.setNavigationBarColor({
+          frontColor: '#ffffff',
+          backgroundColor: `#${res.data.color}`
         })
         // 设置title
         wx.setNavigationBarTitle({
