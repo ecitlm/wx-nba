@@ -4,13 +4,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    playerFiveGame:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
+    this.playerGame(e.id)
     var params = {
       playerid: e.id || '5292'
     }
@@ -25,6 +27,20 @@ Page({
       .catch(e => {
         console.error(e)
       })
+  },
+  playerGame (id) {
+    var params = {
+      playerId: +(id || '5292'),
+      seasonId:2018
+    }
+    app.api.playerGame(params).then((res)=>{
+     this.setData({
+       playerFiveGame: res.data
+     })
+     console.error(res.data)
+    }).catch(e => {
+      console.error(e)
+    })
   },
 
   /**

@@ -1,99 +1,142 @@
 /* pages/player_detail/player_detail.wxss */
 
-view,
-text {
-    box-sizing: border-box
+view, text {
+  box-sizing: border-box;
 }
 
 .player-info {
-    width: 100%;
-    float: left;
-    padding: 20rpx;
-    padding-bottom: 0
+  width: 100%;
+  float: left;
+  padding: 20rpx;
+  padding-bottom: 0;
 }
 
 .player-logo {
-    width: 290rpx;
-    height: 200rpx;
-    float: left;
+  width: 290rpx;
+  height: 200rpx;
+  float: left;
 }
 
 .player-name {
-    font-size: 28rpx;
-    padding-top: 30rpx;
+  font-size: 28rpx;
+  padding-top: 30rpx;
 }
 
 .p-name {
-    font-size: 36rpx;
-    display: block;
-    font-weight: 700;
+  font-size: 36rpx;
+  display: block;
+  font-weight: 700;
 }
 
 .player-data {
-    border-top: 1rpx solid #bebebe;
-    border-bottom: 1rpx solid #bebebe;
-    height: 100rpx;
-    float: left;
-    width: 100%;
-    padding: 5px 0
+  border-top: 1rpx solid #bebebe;
+  border-bottom: 1rpx solid #bebebe;
+  height: 100rpx;
+  float: left;
+  width: 100%;
+  padding: 5px 0;
 }
 
 .player-data view {
-    width: 25%;
-    float: left;
-    border-right: 1rpx solid #bebebe;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 40rpx;
-    font-size: 28rpx;
-    color: #666
+  width: 25%;
+  float: left;
+  border-right: 1rpx solid #bebebe;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666;
 }
 
 .player-data view text {
-    display: block;
-    font-size: 36rpx;
-    color: #333
+  display: block;
+  font-size: 36rpx;
+  color: #333;
 }
 
 .base-info-title {
-    background: #EBECEF;
-    float: left;
-    width: 100%;
-    font-size: 32rpx;
-    padding: 20rpx;
-    box-sizing: border-box
+  background: #ebecef;
+  float: left;
+  width: 100%;
+  font-size: 32rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
 }
 
 .base-info-item {
-    width: 50%;
-    float: left;
-    font-size: 28rpx;
-    padding: 10rpx 20rpx;
-    box-sizing: border-box;
-    border-bottom: 1rpx solid #bebebe
+  width: 50%;
+  float: left;
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #bebebe;
 }
 
 .base-info-item-title {
-    display: block;
-    font-size: 30rpx;
-    color: #666;
-    padding-bottom: 1px;
+  display: block;
+  font-size: 30rpx;
+  color: #666;
+  padding-bottom: 1px;
 }
 
 .gird-9-item {
-    width: 33.333%;
-    height: 120rpx;
-    float: left;
-    text-align: center;
-    font-size: 28rpx;
-    border-bottom: 1rpx solid #bebebe;
-    border-right: 1rpx solid #bebebe;
-    box-sizing: border-box;
-    padding: 20rpx 0
+  width: 33.333%;
+  height: 120rpx;
+  float: left;
+  text-align: center;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #bebebe;
+  border-right: 1rpx solid #bebebe;
+  box-sizing: border-box;
+  padding: 20rpx 0;
 }
 
 .gird-9-item text {
-    display: block;
-    font-size: 36rpx;
-    color: #333;
+  display: block;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.game-header {
+  width: 100%;
+  float: left;
+  border-bottom: 1rpx solid #bebebe;
+}
+
+.game-header text {
+  width: 10.62%;
+  line-height: 80rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.game-header text:nth-child(2) {
+  width: 15%;
+}
+
+.game-body {
+  font-size: 24rpx;
+}
+
+.game-body1{
+  line-height: 70rpx;
+  height: 70rpx;
+  border-bottom: 1rpx solid #bebebe;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
+.game-body text {
+  width: 10.62%;
+  display: inline-block;
+  text-align: center;
+  line-height: 70rpx;
+  height: 70rpx;
+  overflow: hidden;
+  
+}
+
+.game-body text.vs-score {
+  width: 15%;
 }

@@ -69,6 +69,9 @@ function news_comments (params) {
 function player_top (params) {
   return fetchApi('Nba.player_top', params).then(res => res)
 }
+function playerGame(params){
+  return fetchApi('Nba.playerGame', params).then(res => res)
+}
 
 // 关于我
 function website (params) {
@@ -88,5 +91,6 @@ module.exports = {
   news_list,
   team_schedule,
   player_top,
+  playerGame,
   website
 }
