@@ -116,7 +116,7 @@ view, text {
 }
 
 .game-body {
-  font-size: 24rpx;
+  font-size: 25rpx;
 }
 
 .game-body1{
@@ -139,4 +139,7 @@ view, text {
 
 .game-body text.vs-score {
   width: 15%;
+}
+.isWin{
+  color:#00AA98
 }

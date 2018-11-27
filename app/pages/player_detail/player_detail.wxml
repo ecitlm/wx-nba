@@ -76,7 +76,7 @@
     </view>
     <view class='game-body'>
       <view wx:for="{{playerFiveGame.lastMatches.list}}" wx:for-item="item" class='game-body1'>
-        <text>{{util.getDates(item[0])}}</text>
+        <text class="{{item[1].isWin=='1' ? 'isWin' : ''}}">{{util.getDates(item[0])}}</text>
         <text class='vs-score'>{{item[1].selfGoal}} :{{item[1].rivalGoal}}</text>
         <text>{{ util.substr3(item[2].vsTeamName)}}</text>
         <text>{{item[3]}}</text>

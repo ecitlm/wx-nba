@@ -37,7 +37,6 @@ Page({
      this.setData({
        playerFiveGame: res.data
      })
-     console.error(res.data)
     }).catch(e => {
       console.error(e)
     })
