@@ -38,9 +38,6 @@ git clone https://github.com/ecitlm/wx-nba.git
 - [x] 新闻详情接口
 - [x] 新闻评论数据接口
 
-最新在线接口系统列表
-https://wxapp.it919.cn/wx/listAllApis.php
-
 **接口系统源码地址**
 https://github.com/ecitlm/wx-nba-api.git
 
